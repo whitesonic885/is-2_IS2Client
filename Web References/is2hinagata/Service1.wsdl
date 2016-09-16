@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Walkthrough/XmlWebServices/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://Walkthrough/XmlWebServices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Walkthrough/XmlWebServices/">
+      <s:element name="Get_hinagata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_hinagataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_hinagataResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_hinagata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_hinagataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Del_hinagataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Hinagata2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey2" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iKey3" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Hinagata2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Hinagata2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_hinagata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_hinagataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upd_hinagataResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_hinagata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_hinagataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ins_hinagataResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_hinagataNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_hinagataNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_hinagataNoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB">
+        <s:complexType />
+      </s:element>
+      <s:element name="wakeupDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wakeupDBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_hinagataSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_hinagata" />
+  </wsdl:message>
+  <wsdl:message name="Get_hinagataSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_hinagataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Del_hinagataSoapIn">
+    <wsdl:part name="parameters" element="tns:Del_hinagata" />
+  </wsdl:message>
+  <wsdl:message name="Del_hinagataSoapOut">
+    <wsdl:part name="parameters" element="tns:Del_hinagataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Hinagata2SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Hinagata2" />
+  </wsdl:message>
+  <wsdl:message name="Get_Hinagata2SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Hinagata2Response" />
+  </wsdl:message>
+  <wsdl:message name="Upd_hinagataSoapIn">
+    <wsdl:part name="parameters" element="tns:Upd_hinagata" />
+  </wsdl:message>
+  <wsdl:message name="Upd_hinagataSoapOut">
+    <wsdl:part name="parameters" element="tns:Upd_hinagataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ins_hinagataSoapIn">
+    <wsdl:part name="parameters" element="tns:Ins_hinagata" />
+  </wsdl:message>
+  <wsdl:message name="Ins_hinagataSoapOut">
+    <wsdl:part name="parameters" element="tns:Ins_hinagataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_hinagataNoSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_hinagataNo" />
+  </wsdl:message>
+  <wsdl:message name="Get_hinagataNoSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_hinagataNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapIn">
+    <wsdl:part name="parameters" element="tns:wakeupDB" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapOut">
+    <wsdl:part name="parameters" element="tns:wakeupDBResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="Get_hinagata">
+      <wsdl:input message="tns:Get_hinagataSoapIn" />
+      <wsdl:output message="tns:Get_hinagataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Del_hinagata">
+      <wsdl:input message="tns:Del_hinagataSoapIn" />
+      <wsdl:output message="tns:Del_hinagataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Hinagata2">
+      <wsdl:input message="tns:Get_Hinagata2SoapIn" />
+      <wsdl:output message="tns:Get_Hinagata2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upd_hinagata">
+      <wsdl:input message="tns:Upd_hinagataSoapIn" />
+      <wsdl:output message="tns:Upd_hinagataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ins_hinagata">
+      <wsdl:input message="tns:Ins_hinagataSoapIn" />
+      <wsdl:output message="tns:Ins_hinagataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_hinagataNo">
+      <wsdl:input message="tns:Get_hinagataNoSoapIn" />
+      <wsdl:output message="tns:Get_hinagataNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <wsdl:input message="tns:wakeupDBSoapIn" />
+      <wsdl:output message="tns:wakeupDBSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="Get_hinagata">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_hinagata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Del_hinagata">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Del_hinagata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Hinagata2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_Hinagata2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upd_hinagata">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Upd_hinagata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ins_hinagata">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Ins_hinagata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_hinagataNo">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_hinagataNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/wakeupDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">is2hinagata</documentation>
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://wwwis2.fukutsu.co.jp/is2/is2hinagata/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

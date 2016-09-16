@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Walkthrough/XmlWebServices/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://Walkthrough/XmlWebServices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Walkthrough/XmlWebServices/">
+      <s:element name="Get_todokesaki">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKana" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_todokesakiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_todokesakiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Stodokesaki">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_StodokesakiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_StodokesakiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_todokesaki">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_todokesakiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upd_todokesakiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_todokesaki">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_todokesakiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ins_todokesakiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_todokesakis">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_todokesakisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Del_todokesakisResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_todokesaki">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_todokesakiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Del_todokesakiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_todokesaki2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_todokesaki2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Del_todokesaki2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_todokesaki3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_todokesaki3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Del_todokesaki3Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_uploadData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_uploadDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ins_uploadDataResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_uploadData2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_uploadData2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ins_uploadData2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_csvwrite">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_csvwriteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_csvwriteResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ninushiCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ninushiCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ninushiCountResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_otodokeCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_otodokeCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_otodokeCountResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_csvwrite2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKana" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortLabel1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortPat1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortLabel2" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortPat2" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_csvwrite2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_csvwrite2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_csvwrite3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKana" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortLabel1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortPat1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortLabel2" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortPat2" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUpdateDay" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_csvwrite3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_csvwrite3Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_todokesaki2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKana" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortLabel1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortPat1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortLabel2" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortPat2" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_todokesaki2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_todokesaki2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_todokesaki3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKana" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortLabel1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortPat1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortLabel2" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortPat2" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="bMultiLine" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_todokesaki3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_todokesaki3Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_todokesaki4">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKana" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortLabel1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortPat1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortLabel2" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortPat2" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="bMultiLine" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUpdateDay" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_todokesaki4Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_todokesaki4Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_TensyoCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTensyoCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_TensyoCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Check_TensyoCodeResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_NiukeninCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Check_NiukeninCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Check_NiukeninCodeResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_todokesaki2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_todokesaki2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ins_todokesaki2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_todokesaki2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_todokesaki2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upd_todokesaki2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB">
+        <s:complexType />
+      </s:element>
+      <s:element name="wakeupDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wakeupDBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iConCnt" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wakeupDB2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_todokesakiSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_todokesaki" />
+  </wsdl:message>
+  <wsdl:message name="Get_todokesakiSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_todokesakiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_StodokesakiSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Stodokesaki" />
+  </wsdl:message>
+  <wsdl:message name="Get_StodokesakiSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_StodokesakiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upd_todokesakiSoapIn">
+    <wsdl:part name="parameters" element="tns:Upd_todokesaki" />
+  </wsdl:message>
+  <wsdl:message name="Upd_todokesakiSoapOut">
+    <wsdl:part name="parameters" element="tns:Upd_todokesakiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ins_todokesakiSoapIn">
+    <wsdl:part name="parameters" element="tns:Ins_todokesaki" />
+  </wsdl:message>
+  <wsdl:message name="Ins_todokesakiSoapOut">
+    <wsdl:part name="parameters" element="tns:Ins_todokesakiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Del_todokesakisSoapIn">
+    <wsdl:part name="parameters" element="tns:Del_todokesakis" />
+  </wsdl:message>
+  <wsdl:message name="Del_todokesakisSoapOut">
+    <wsdl:part name="parameters" element="tns:Del_todokesakisResponse" />
+  </wsdl:message>
+  <wsdl:message name="Del_todokesakiSoapIn">
+    <wsdl:part name="parameters" element="tns:Del_todokesaki" />
+  </wsdl:message>
+  <wsdl:message name="Del_todokesakiSoapOut">
+    <wsdl:part name="parameters" element="tns:Del_todokesakiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Del_todokesaki2SoapIn">
+    <wsdl:part name="parameters" element="tns:Del_todokesaki2" />
+  </wsdl:message>
+  <wsdl:message name="Del_todokesaki2SoapOut">
+    <wsdl:part name="parameters" element="tns:Del_todokesaki2Response" />
+  </wsdl:message>
+  <wsdl:message name="Del_todokesaki3SoapIn">
+    <wsdl:part name="parameters" element="tns:Del_todokesaki3" />
+  </wsdl:message>
+  <wsdl:message name="Del_todokesaki3SoapOut">
+    <wsdl:part name="parameters" element="tns:Del_todokesaki3Response" />
+  </wsdl:message>
+  <wsdl:message name="Ins_uploadDataSoapIn">
+    <wsdl:part name="parameters" element="tns:Ins_uploadData" />
+  </wsdl:message>
+  <wsdl:message name="Ins_uploadDataSoapOut">
+    <wsdl:part name="parameters" element="tns:Ins_uploadDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ins_uploadData2SoapIn">
+    <wsdl:part name="parameters" element="tns:Ins_uploadData2" />
+  </wsdl:message>
+  <wsdl:message name="Ins_uploadData2SoapOut">
+    <wsdl:part name="parameters" element="tns:Ins_uploadData2Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_csvwriteSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_csvwrite" />
+  </wsdl:message>
+  <wsdl:message name="Get_csvwriteSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_csvwriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ninushiCountSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ninushiCount" />
+  </wsdl:message>
+  <wsdl:message name="Get_ninushiCountSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ninushiCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_otodokeCountSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_otodokeCount" />
+  </wsdl:message>
+  <wsdl:message name="Get_otodokeCountSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_otodokeCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_csvwrite2SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_csvwrite2" />
+  </wsdl:message>
+  <wsdl:message name="Get_csvwrite2SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_csvwrite2Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_csvwrite3SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_csvwrite3" />
+  </wsdl:message>
+  <wsdl:message name="Get_csvwrite3SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_csvwrite3Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_todokesaki2SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_todokesaki2" />
+  </wsdl:message>
+  <wsdl:message name="Get_todokesaki2SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_todokesaki2Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_todokesaki3SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_todokesaki3" />
+  </wsdl:message>
+  <wsdl:message name="Get_todokesaki3SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_todokesaki3Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_todokesaki4SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_todokesaki4" />
+  </wsdl:message>
+  <wsdl:message name="Get_todokesaki4SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_todokesaki4Response" />
+  </wsdl:message>
+  <wsdl:message name="Check_TensyoCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Check_TensyoCode" />
+  </wsdl:message>
+  <wsdl:message name="Check_TensyoCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:Check_TensyoCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Check_NiukeninCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Check_NiukeninCode" />
+  </wsdl:message>
+  <wsdl:message name="Check_NiukeninCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:Check_NiukeninCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ins_todokesaki2SoapIn">
+    <wsdl:part name="parameters" element="tns:Ins_todokesaki2" />
+  </wsdl:message>
+  <wsdl:message name="Ins_todokesaki2SoapOut">
+    <wsdl:part name="parameters" element="tns:Ins_todokesaki2Response" />
+  </wsdl:message>
+  <wsdl:message name="Upd_todokesaki2SoapIn">
+    <wsdl:part name="parameters" element="tns:Upd_todokesaki2" />
+  </wsdl:message>
+  <wsdl:message name="Upd_todokesaki2SoapOut">
+    <wsdl:part name="parameters" element="tns:Upd_todokesaki2Response" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapIn">
+    <wsdl:part name="parameters" element="tns:wakeupDB" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapOut">
+    <wsdl:part name="parameters" element="tns:wakeupDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDB2SoapIn">
+    <wsdl:part name="parameters" element="tns:wakeupDB2" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDB2SoapOut">
+    <wsdl:part name="parameters" element="tns:wakeupDB2Response" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="Get_todokesaki">
+      <wsdl:input message="tns:Get_todokesakiSoapIn" />
+      <wsdl:output message="tns:Get_todokesakiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Stodokesaki">
+      <wsdl:input message="tns:Get_StodokesakiSoapIn" />
+      <wsdl:output message="tns:Get_StodokesakiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upd_todokesaki">
+      <wsdl:input message="tns:Upd_todokesakiSoapIn" />
+      <wsdl:output message="tns:Upd_todokesakiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ins_todokesaki">
+      <wsdl:input message="tns:Ins_todokesakiSoapIn" />
+      <wsdl:output message="tns:Ins_todokesakiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Del_todokesakis">
+      <wsdl:input message="tns:Del_todokesakisSoapIn" />
+      <wsdl:output message="tns:Del_todokesakisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Del_todokesaki">
+      <wsdl:input message="tns:Del_todokesakiSoapIn" />
+      <wsdl:output message="tns:Del_todokesakiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Del_todokesaki2">
+      <wsdl:input message="tns:Del_todokesaki2SoapIn" />
+      <wsdl:output message="tns:Del_todokesaki2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Del_todokesaki3">
+      <wsdl:input message="tns:Del_todokesaki3SoapIn" />
+      <wsdl:output message="tns:Del_todokesaki3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ins_uploadData">
+      <wsdl:input message="tns:Ins_uploadDataSoapIn" />
+      <wsdl:output message="tns:Ins_uploadDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ins_uploadData2">
+      <wsdl:input message="tns:Ins_uploadData2SoapIn" />
+      <wsdl:output message="tns:Ins_uploadData2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_csvwrite">
+      <wsdl:input message="tns:Get_csvwriteSoapIn" />
+      <wsdl:output message="tns:Get_csvwriteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ninushiCount">
+      <wsdl:input message="tns:Get_ninushiCountSoapIn" />
+      <wsdl:output message="tns:Get_ninushiCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_otodokeCount">
+      <wsdl:input message="tns:Get_otodokeCountSoapIn" />
+      <wsdl:output message="tns:Get_otodokeCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_csvwrite2">
+      <wsdl:input message="tns:Get_csvwrite2SoapIn" />
+      <wsdl:output message="tns:Get_csvwrite2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_csvwrite3">
+      <wsdl:input message="tns:Get_csvwrite3SoapIn" />
+      <wsdl:output message="tns:Get_csvwrite3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_todokesaki2">
+      <wsdl:input message="tns:Get_todokesaki2SoapIn" />
+      <wsdl:output message="tns:Get_todokesaki2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_todokesaki3">
+      <wsdl:input message="tns:Get_todokesaki3SoapIn" />
+      <wsdl:output message="tns:Get_todokesaki3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_todokesaki4">
+      <wsdl:input message="tns:Get_todokesaki4SoapIn" />
+      <wsdl:output message="tns:Get_todokesaki4SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Check_TensyoCode">
+      <wsdl:input message="tns:Check_TensyoCodeSoapIn" />
+      <wsdl:output message="tns:Check_TensyoCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Check_NiukeninCode">
+      <wsdl:input message="tns:Check_NiukeninCodeSoapIn" />
+      <wsdl:output message="tns:Check_NiukeninCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ins_todokesaki2">
+      <wsdl:input message="tns:Ins_todokesaki2SoapIn" />
+      <wsdl:output message="tns:Ins_todokesaki2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upd_todokesaki2">
+      <wsdl:input message="tns:Upd_todokesaki2SoapIn" />
+      <wsdl:output message="tns:Upd_todokesaki2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <wsdl:input message="tns:wakeupDBSoapIn" />
+      <wsdl:output message="tns:wakeupDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB2">
+      <wsdl:input message="tns:wakeupDB2SoapIn" />
+      <wsdl:output message="tns:wakeupDB2SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="Get_todokesaki">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_todokesaki" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Stodokesaki">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_Stodokesaki" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upd_todokesaki">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Upd_todokesaki" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ins_todokesaki">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Ins_todokesaki" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Del_todokesakis">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Del_todokesakis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Del_todokesaki">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Del_todokesaki" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Del_todokesaki2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Del_todokesaki2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Del_todokesaki3">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Del_todokesaki3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ins_uploadData">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Ins_uploadData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ins_uploadData2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Ins_uploadData2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_csvwrite">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_csvwrite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ninushiCount">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_ninushiCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_otodokeCount">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_otodokeCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_csvwrite2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_csvwrite2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_csvwrite3">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_csvwrite3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_todokesaki2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_todokesaki2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_todokesaki3">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_todokesaki3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_todokesaki4">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_todokesaki4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Check_TensyoCode">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Check_TensyoCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Check_NiukeninCode">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Check_NiukeninCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ins_todokesaki2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Ins_todokesaki2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upd_todokesaki2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Upd_todokesaki2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/wakeupDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/wakeupDB2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">is2otodoke</documentation>
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://wwwis2.fukutsu.co.jp/is2/is2otodoke/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

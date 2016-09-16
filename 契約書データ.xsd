@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="契約書データ" targetNamespace="http://tempuri.org/契約書データ.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/契約書データ.xsd" xmlns:mstns="http://tempuri.org/契約書データ.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="契約書データ" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="table契約書">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="申込者郵便番号" type="xs:string" minOccurs="0" />
+							<xs:element name="申込者住所県" type="xs:string" minOccurs="0" />
+							<xs:element name="申込者住所_xFF11_" type="xs:string" minOccurs="0" />
+							<xs:element name="申込者住所_xFF12_" type="xs:string" minOccurs="0" />
+							<xs:element name="申込者名フリガナ" type="xs:string" minOccurs="0" />
+							<xs:element name="申込者名" type="xs:string" minOccurs="0" />
+							<xs:element name="申込者電話番号" type="xs:string" minOccurs="0" />
+							<xs:element name="申込者_xFF26__xFF21__xFF38_番号" type="xs:string" minOccurs="0" />
+							<xs:element name="受店所郵便番号" type="xs:string" minOccurs="0" />
+							<xs:element name="受店所住所県" type="xs:string" minOccurs="0" />
+							<xs:element name="受店所住所_xFF11_" type="xs:string" minOccurs="0" />
+							<xs:element name="受店所住所_xFF12_" type="xs:string" minOccurs="0" />
+							<xs:element name="受店所名" type="xs:string" minOccurs="0" />
+							<xs:element name="受店所電話番号" type="xs:string" minOccurs="0" />
+							<xs:element name="受店所_xFF26__xFF21__xFF38_番号" type="xs:string" minOccurs="0" />
+							<xs:element name="設置場所郵便番号" type="xs:string" minOccurs="0" />
+							<xs:element name="設置場所住所県" type="xs:string" minOccurs="0" />
+							<xs:element name="設置場所住所_xFF11_" type="xs:string" minOccurs="0" />
+							<xs:element name="設置場所住所_xFF12_" type="xs:string" minOccurs="0" />
+							<xs:element name="設置場所法人名フリガナ" type="xs:string" minOccurs="0" />
+							<xs:element name="設置場所法人名" type="xs:string" minOccurs="0" />
+							<xs:element name="設置場所担当者役職" type="xs:string" minOccurs="0" />
+							<xs:element name="設置場所担当者名" type="xs:string" minOccurs="0" />
+							<xs:element name="設置場所電話番号" type="xs:string" minOccurs="0" />
+							<xs:element name="設置場所_xFF26__xFF21__xFF38_番号" type="xs:string" minOccurs="0" />
+							<xs:element name="頁見出し" type="xs:string" minOccurs="0" />
+							<xs:element name="申込管理番号" type="xs:string" minOccurs="0" />
+							<xs:element name="申込管理番号バーコード" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

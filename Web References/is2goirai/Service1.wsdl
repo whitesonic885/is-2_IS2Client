@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Walkthrough/XmlWebServices/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://Walkthrough/XmlWebServices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Walkthrough/XmlWebServices/">
+      <s:element name="Get_irainusi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKana" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sICode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_irainusiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_irainusiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_irainusi2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_irainusi2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_irainusi2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Sirainusi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sICode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_SirainusiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_SirainusiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_irainusi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_irainusiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upd_irainusiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_irainusi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_irainusiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ins_irainusiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_irainusi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_irainusiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Del_irainusiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_SyukkaIrainusi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_SyukkaIrainusiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sel_SyukkaIrainusiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_irainusi1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_irainusi1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upd_irainusi1Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_riyo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_riyoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_riyoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_csvwrite">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_csvwriteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_csvwriteResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_csvwrite2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_csvwrite2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_csvwrite2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_uploadData2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_uploadData2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ins_uploadData2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_irainusis">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_irainusisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Del_irainusisResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB">
+        <s:complexType />
+      </s:element>
+      <s:element name="wakeupDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wakeupDBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iConCnt" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wakeupDB2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_irainusiSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_irainusi" />
+  </wsdl:message>
+  <wsdl:message name="Get_irainusiSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_irainusiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_irainusi2SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_irainusi2" />
+  </wsdl:message>
+  <wsdl:message name="Get_irainusi2SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_irainusi2Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_SirainusiSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Sirainusi" />
+  </wsdl:message>
+  <wsdl:message name="Get_SirainusiSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_SirainusiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upd_irainusiSoapIn">
+    <wsdl:part name="parameters" element="tns:Upd_irainusi" />
+  </wsdl:message>
+  <wsdl:message name="Upd_irainusiSoapOut">
+    <wsdl:part name="parameters" element="tns:Upd_irainusiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ins_irainusiSoapIn">
+    <wsdl:part name="parameters" element="tns:Ins_irainusi" />
+  </wsdl:message>
+  <wsdl:message name="Ins_irainusiSoapOut">
+    <wsdl:part name="parameters" element="tns:Ins_irainusiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Del_irainusiSoapIn">
+    <wsdl:part name="parameters" element="tns:Del_irainusi" />
+  </wsdl:message>
+  <wsdl:message name="Del_irainusiSoapOut">
+    <wsdl:part name="parameters" element="tns:Del_irainusiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Sel_SyukkaIrainusiSoapIn">
+    <wsdl:part name="parameters" element="tns:Sel_SyukkaIrainusi" />
+  </wsdl:message>
+  <wsdl:message name="Sel_SyukkaIrainusiSoapOut">
+    <wsdl:part name="parameters" element="tns:Sel_SyukkaIrainusiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upd_irainusi1SoapIn">
+    <wsdl:part name="parameters" element="tns:Upd_irainusi1" />
+  </wsdl:message>
+  <wsdl:message name="Upd_irainusi1SoapOut">
+    <wsdl:part name="parameters" element="tns:Upd_irainusi1Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_riyoSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_riyo" />
+  </wsdl:message>
+  <wsdl:message name="Get_riyoSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_riyoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_csvwriteSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_csvwrite" />
+  </wsdl:message>
+  <wsdl:message name="Get_csvwriteSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_csvwriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_csvwrite2SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_csvwrite2" />
+  </wsdl:message>
+  <wsdl:message name="Get_csvwrite2SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_csvwrite2Response" />
+  </wsdl:message>
+  <wsdl:message name="Ins_uploadData2SoapIn">
+    <wsdl:part name="parameters" element="tns:Ins_uploadData2" />
+  </wsdl:message>
+  <wsdl:message name="Ins_uploadData2SoapOut">
+    <wsdl:part name="parameters" element="tns:Ins_uploadData2Response" />
+  </wsdl:message>
+  <wsdl:message name="Del_irainusisSoapIn">
+    <wsdl:part name="parameters" element="tns:Del_irainusis" />
+  </wsdl:message>
+  <wsdl:message name="Del_irainusisSoapOut">
+    <wsdl:part name="parameters" element="tns:Del_irainusisResponse" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapIn">
+    <wsdl:part name="parameters" element="tns:wakeupDB" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapOut">
+    <wsdl:part name="parameters" element="tns:wakeupDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDB2SoapIn">
+    <wsdl:part name="parameters" element="tns:wakeupDB2" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDB2SoapOut">
+    <wsdl:part name="parameters" element="tns:wakeupDB2Response" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="Get_irainusi">
+      <wsdl:input message="tns:Get_irainusiSoapIn" />
+      <wsdl:output message="tns:Get_irainusiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_irainusi2">
+      <wsdl:input message="tns:Get_irainusi2SoapIn" />
+      <wsdl:output message="tns:Get_irainusi2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Sirainusi">
+      <wsdl:input message="tns:Get_SirainusiSoapIn" />
+      <wsdl:output message="tns:Get_SirainusiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upd_irainusi">
+      <wsdl:input message="tns:Upd_irainusiSoapIn" />
+      <wsdl:output message="tns:Upd_irainusiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ins_irainusi">
+      <wsdl:input message="tns:Ins_irainusiSoapIn" />
+      <wsdl:output message="tns:Ins_irainusiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Del_irainusi">
+      <wsdl:input message="tns:Del_irainusiSoapIn" />
+      <wsdl:output message="tns:Del_irainusiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sel_SyukkaIrainusi">
+      <wsdl:input message="tns:Sel_SyukkaIrainusiSoapIn" />
+      <wsdl:output message="tns:Sel_SyukkaIrainusiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upd_irainusi1">
+      <wsdl:input message="tns:Upd_irainusi1SoapIn" />
+      <wsdl:output message="tns:Upd_irainusi1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_riyo">
+      <wsdl:input message="tns:Get_riyoSoapIn" />
+      <wsdl:output message="tns:Get_riyoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_csvwrite">
+      <wsdl:input message="tns:Get_csvwriteSoapIn" />
+      <wsdl:output message="tns:Get_csvwriteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_csvwrite2">
+      <wsdl:input message="tns:Get_csvwrite2SoapIn" />
+      <wsdl:output message="tns:Get_csvwrite2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ins_uploadData2">
+      <wsdl:input message="tns:Ins_uploadData2SoapIn" />
+      <wsdl:output message="tns:Ins_uploadData2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Del_irainusis">
+      <wsdl:input message="tns:Del_irainusisSoapIn" />
+      <wsdl:output message="tns:Del_irainusisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <wsdl:input message="tns:wakeupDBSoapIn" />
+      <wsdl:output message="tns:wakeupDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB2">
+      <wsdl:input message="tns:wakeupDB2SoapIn" />
+      <wsdl:output message="tns:wakeupDB2SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="Get_irainusi">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_irainusi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_irainusi2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_irainusi2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Sirainusi">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_Sirainusi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upd_irainusi">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Upd_irainusi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ins_irainusi">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Ins_irainusi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Del_irainusi">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Del_irainusi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sel_SyukkaIrainusi">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Sel_SyukkaIrainusi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upd_irainusi1">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Upd_irainusi1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_riyo">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_riyo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_csvwrite">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_csvwrite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_csvwrite2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_csvwrite2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ins_uploadData2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Ins_uploadData2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Del_irainusis">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Del_irainusis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/wakeupDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/wakeupDB2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">is2goirai</documentation>
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://wwwis2.fukutsu.co.jp/is2/is2goirai/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

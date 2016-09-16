@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Walkthrough/XmlWebServices/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://Walkthrough/XmlWebServices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Walkthrough/XmlWebServices/">
+      <s:element name="Get_hatuten3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_hatuten3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_hatuten3Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_Section">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_SectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sel_SectionResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Claim">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ClaimResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ClaimResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Claim2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTensyo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKaiin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Claim2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Claim2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_Postcode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_PostcodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sel_PostcodeResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_Postcode1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_Postcode1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sel_Postcode1Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Set_login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Set_loginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Set_loginResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_csvwrite">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_csvwriteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_csvwriteResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_MemberTn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_MemberTnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sel_MemberTnResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_Member">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_MemberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sel_MemberResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_MemberTn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_MemberTnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_MemberTnResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_MemberTn3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_MemberTn3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_MemberTn3Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Goirainusi2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Goirainusi2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Goirainusi2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Sirainusi2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sICode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Sirainusi2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Sirainusi2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_InvoicePrintData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_InvoicePrintDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_InvoicePrintDataResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Set_InvoiceNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Set_InvoiceNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Set_InvoiceNoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_InvoiceNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_InvoiceNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_InvoiceNoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_hatuten2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_hatuten2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_hatuten2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_syuuyakuten2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_syuuyakuten2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_syuuyakuten2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_syukka2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_syukka2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upd_syukka2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_syukka">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_syukkaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ins_syukkaResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_byPostcodeM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="s郵便番号" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_byPostcodeMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_byPostcodeMResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_byKenShiM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="s都道府県_xFF23__xFF24_" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="s市区町村_xFF23__xFF24_" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_byKenShiMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_byKenShiMResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_byKenShi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="s都道府県_xFF23__xFF24_" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="s市区町村_xFF23__xFF24_" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_byKenShiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_byKenShiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_byPostcode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="s郵便番号" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_byPostcodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_byPostcodeResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_Mosikomi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_MosikomiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ins_MosikomiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_KaniSaiban">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_KaniSaibanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_KaniSaibanResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_Mosikomi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_MosikomiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upd_MosikomiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_autoEntryPref3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKaiinCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBumonCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNiukeCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sYuubin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sJuusyo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sShimei" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_autoEntryPref3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_autoEntryPref3Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_kijiCD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_kijiCDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_kijiCDResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_NotePrintData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_NotePrintDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_NotePrintDataResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_byPostcode2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="s郵便番号" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_byPostcode2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_byPostcode2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="otodoke_Ins_uploadData2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="otodoke_Ins_uploadData2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="otodoke_Ins_uploadData2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="goirai_Ins_uploadData2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="goirai_Ins_uploadData2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="goirai_Ins_uploadData2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB">
+        <s:complexType />
+      </s:element>
+      <s:element name="wakeupDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wakeupDBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iConCnt" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wakeupDB2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_hatuten3SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_hatuten3" />
+  </wsdl:message>
+  <wsdl:message name="Get_hatuten3SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_hatuten3Response" />
+  </wsdl:message>
+  <wsdl:message name="Sel_SectionSoapIn">
+    <wsdl:part name="parameters" element="tns:Sel_Section" />
+  </wsdl:message>
+  <wsdl:message name="Sel_SectionSoapOut">
+    <wsdl:part name="parameters" element="tns:Sel_SectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ClaimSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Claim" />
+  </wsdl:message>
+  <wsdl:message name="Get_ClaimSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Claim2SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Claim2" />
+  </wsdl:message>
+  <wsdl:message name="Get_Claim2SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Claim2Response" />
+  </wsdl:message>
+  <wsdl:message name="Sel_PostcodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Sel_Postcode" />
+  </wsdl:message>
+  <wsdl:message name="Sel_PostcodeSoapOut">
+    <wsdl:part name="parameters" element="tns:Sel_PostcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Sel_Postcode1SoapIn">
+    <wsdl:part name="parameters" element="tns:Sel_Postcode1" />
+  </wsdl:message>
+  <wsdl:message name="Sel_Postcode1SoapOut">
+    <wsdl:part name="parameters" element="tns:Sel_Postcode1Response" />
+  </wsdl:message>
+  <wsdl:message name="Set_loginSoapIn">
+    <wsdl:part name="parameters" element="tns:Set_login" />
+  </wsdl:message>
+  <wsdl:message name="Set_loginSoapOut">
+    <wsdl:part name="parameters" element="tns:Set_loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_csvwriteSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_csvwrite" />
+  </wsdl:message>
+  <wsdl:message name="Get_csvwriteSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_csvwriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Sel_MemberTnSoapIn">
+    <wsdl:part name="parameters" element="tns:Sel_MemberTn" />
+  </wsdl:message>
+  <wsdl:message name="Sel_MemberTnSoapOut">
+    <wsdl:part name="parameters" element="tns:Sel_MemberTnResponse" />
+  </wsdl:message>
+  <wsdl:message name="Sel_MemberSoapIn">
+    <wsdl:part name="parameters" element="tns:Sel_Member" />
+  </wsdl:message>
+  <wsdl:message name="Sel_MemberSoapOut">
+    <wsdl:part name="parameters" element="tns:Sel_MemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_MemberTnSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_MemberTn" />
+  </wsdl:message>
+  <wsdl:message name="Get_MemberTnSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_MemberTnResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_MemberTn3SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_MemberTn3" />
+  </wsdl:message>
+  <wsdl:message name="Get_MemberTn3SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_MemberTn3Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_Goirainusi2SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Goirainusi2" />
+  </wsdl:message>
+  <wsdl:message name="Get_Goirainusi2SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Goirainusi2Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_Sirainusi2SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Sirainusi2" />
+  </wsdl:message>
+  <wsdl:message name="Get_Sirainusi2SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Sirainusi2Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_InvoicePrintDataSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_InvoicePrintData" />
+  </wsdl:message>
+  <wsdl:message name="Get_InvoicePrintDataSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_InvoicePrintDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Set_InvoiceNoSoapIn">
+    <wsdl:part name="parameters" element="tns:Set_InvoiceNo" />
+  </wsdl:message>
+  <wsdl:message name="Set_InvoiceNoSoapOut">
+    <wsdl:part name="parameters" element="tns:Set_InvoiceNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_InvoiceNoSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_InvoiceNo" />
+  </wsdl:message>
+  <wsdl:message name="Get_InvoiceNoSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_InvoiceNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_hatuten2SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_hatuten2" />
+  </wsdl:message>
+  <wsdl:message name="Get_hatuten2SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_hatuten2Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_syuuyakuten2SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_syuuyakuten2" />
+  </wsdl:message>
+  <wsdl:message name="Get_syuuyakuten2SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_syuuyakuten2Response" />
+  </wsdl:message>
+  <wsdl:message name="Upd_syukka2SoapIn">
+    <wsdl:part name="parameters" element="tns:Upd_syukka2" />
+  </wsdl:message>
+  <wsdl:message name="Upd_syukka2SoapOut">
+    <wsdl:part name="parameters" element="tns:Upd_syukka2Response" />
+  </wsdl:message>
+  <wsdl:message name="Ins_syukkaSoapIn">
+    <wsdl:part name="parameters" element="tns:Ins_syukka" />
+  </wsdl:message>
+  <wsdl:message name="Ins_syukkaSoapOut">
+    <wsdl:part name="parameters" element="tns:Ins_syukkaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_byPostcodeMSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_byPostcodeM" />
+  </wsdl:message>
+  <wsdl:message name="Get_byPostcodeMSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_byPostcodeMResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_byKenShiMSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_byKenShiM" />
+  </wsdl:message>
+  <wsdl:message name="Get_byKenShiMSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_byKenShiMResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_byKenShiSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_byKenShi" />
+  </wsdl:message>
+  <wsdl:message name="Get_byKenShiSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_byKenShiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_byPostcodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_byPostcode" />
+  </wsdl:message>
+  <wsdl:message name="Get_byPostcodeSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_byPostcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ins_MosikomiSoapIn">
+    <wsdl:part name="parameters" element="tns:Ins_Mosikomi" />
+  </wsdl:message>
+  <wsdl:message name="Ins_MosikomiSoapOut">
+    <wsdl:part name="parameters" element="tns:Ins_MosikomiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_KaniSaibanSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_KaniSaiban" />
+  </wsdl:message>
+  <wsdl:message name="Get_KaniSaibanSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_KaniSaibanResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upd_MosikomiSoapIn">
+    <wsdl:part name="parameters" element="tns:Upd_Mosikomi" />
+  </wsdl:message>
+  <wsdl:message name="Upd_MosikomiSoapOut">
+    <wsdl:part name="parameters" element="tns:Upd_MosikomiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_autoEntryPref3SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_autoEntryPref3" />
+  </wsdl:message>
+  <wsdl:message name="Get_autoEntryPref3SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_autoEntryPref3Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_kijiCDSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_kijiCD" />
+  </wsdl:message>
+  <wsdl:message name="Get_kijiCDSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_kijiCDResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_NotePrintDataSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_NotePrintData" />
+  </wsdl:message>
+  <wsdl:message name="Get_NotePrintDataSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_NotePrintDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_byPostcode2SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_byPostcode2" />
+  </wsdl:message>
+  <wsdl:message name="Get_byPostcode2SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_byPostcode2Response" />
+  </wsdl:message>
+  <wsdl:message name="otodoke_Ins_uploadData2SoapIn">
+    <wsdl:part name="parameters" element="tns:otodoke_Ins_uploadData2" />
+  </wsdl:message>
+  <wsdl:message name="otodoke_Ins_uploadData2SoapOut">
+    <wsdl:part name="parameters" element="tns:otodoke_Ins_uploadData2Response" />
+  </wsdl:message>
+  <wsdl:message name="goirai_Ins_uploadData2SoapIn">
+    <wsdl:part name="parameters" element="tns:goirai_Ins_uploadData2" />
+  </wsdl:message>
+  <wsdl:message name="goirai_Ins_uploadData2SoapOut">
+    <wsdl:part name="parameters" element="tns:goirai_Ins_uploadData2Response" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapIn">
+    <wsdl:part name="parameters" element="tns:wakeupDB" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapOut">
+    <wsdl:part name="parameters" element="tns:wakeupDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDB2SoapIn">
+    <wsdl:part name="parameters" element="tns:wakeupDB2" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDB2SoapOut">
+    <wsdl:part name="parameters" element="tns:wakeupDB2Response" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="Get_hatuten3">
+      <wsdl:input message="tns:Get_hatuten3SoapIn" />
+      <wsdl:output message="tns:Get_hatuten3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sel_Section">
+      <wsdl:input message="tns:Sel_SectionSoapIn" />
+      <wsdl:output message="tns:Sel_SectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Claim">
+      <wsdl:input message="tns:Get_ClaimSoapIn" />
+      <wsdl:output message="tns:Get_ClaimSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Claim2">
+      <wsdl:input message="tns:Get_Claim2SoapIn" />
+      <wsdl:output message="tns:Get_Claim2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sel_Postcode">
+      <wsdl:input message="tns:Sel_PostcodeSoapIn" />
+      <wsdl:output message="tns:Sel_PostcodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sel_Postcode1">
+      <wsdl:input message="tns:Sel_Postcode1SoapIn" />
+      <wsdl:output message="tns:Sel_Postcode1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_login">
+      <wsdl:input message="tns:Set_loginSoapIn" />
+      <wsdl:output message="tns:Set_loginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_csvwrite">
+      <wsdl:input message="tns:Get_csvwriteSoapIn" />
+      <wsdl:output message="tns:Get_csvwriteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sel_MemberTn">
+      <wsdl:input message="tns:Sel_MemberTnSoapIn" />
+      <wsdl:output message="tns:Sel_MemberTnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sel_Member">
+      <wsdl:input message="tns:Sel_MemberSoapIn" />
+      <wsdl:output message="tns:Sel_MemberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_MemberTn">
+      <wsdl:input message="tns:Get_MemberTnSoapIn" />
+      <wsdl:output message="tns:Get_MemberTnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_MemberTn3">
+      <wsdl:input message="tns:Get_MemberTn3SoapIn" />
+      <wsdl:output message="tns:Get_MemberTn3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Goirainusi2">
+      <wsdl:input message="tns:Get_Goirainusi2SoapIn" />
+      <wsdl:output message="tns:Get_Goirainusi2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Sirainusi2">
+      <wsdl:input message="tns:Get_Sirainusi2SoapIn" />
+      <wsdl:output message="tns:Get_Sirainusi2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_InvoicePrintData">
+      <wsdl:input message="tns:Get_InvoicePrintDataSoapIn" />
+      <wsdl:output message="tns:Get_InvoicePrintDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_InvoiceNo">
+      <wsdl:input message="tns:Set_InvoiceNoSoapIn" />
+      <wsdl:output message="tns:Set_InvoiceNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_InvoiceNo">
+      <wsdl:input message="tns:Get_InvoiceNoSoapIn" />
+      <wsdl:output message="tns:Get_InvoiceNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_hatuten2">
+      <wsdl:input message="tns:Get_hatuten2SoapIn" />
+      <wsdl:output message="tns:Get_hatuten2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_syuuyakuten2">
+      <wsdl:input message="tns:Get_syuuyakuten2SoapIn" />
+      <wsdl:output message="tns:Get_syuuyakuten2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upd_syukka2">
+      <wsdl:input message="tns:Upd_syukka2SoapIn" />
+      <wsdl:output message="tns:Upd_syukka2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ins_syukka">
+      <wsdl:input message="tns:Ins_syukkaSoapIn" />
+      <wsdl:output message="tns:Ins_syukkaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_byPostcodeM">
+      <wsdl:input message="tns:Get_byPostcodeMSoapIn" />
+      <wsdl:output message="tns:Get_byPostcodeMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_byKenShiM">
+      <wsdl:input message="tns:Get_byKenShiMSoapIn" />
+      <wsdl:output message="tns:Get_byKenShiMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_byKenShi">
+      <wsdl:input message="tns:Get_byKenShiSoapIn" />
+      <wsdl:output message="tns:Get_byKenShiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_byPostcode">
+      <wsdl:input message="tns:Get_byPostcodeSoapIn" />
+      <wsdl:output message="tns:Get_byPostcodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ins_Mosikomi">
+      <wsdl:input message="tns:Ins_MosikomiSoapIn" />
+      <wsdl:output message="tns:Ins_MosikomiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_KaniSaiban">
+      <wsdl:input message="tns:Get_KaniSaibanSoapIn" />
+      <wsdl:output message="tns:Get_KaniSaibanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upd_Mosikomi">
+      <wsdl:input message="tns:Upd_MosikomiSoapIn" />
+      <wsdl:output message="tns:Upd_MosikomiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_autoEntryPref3">
+      <wsdl:input message="tns:Get_autoEntryPref3SoapIn" />
+      <wsdl:output message="tns:Get_autoEntryPref3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_kijiCD">
+      <wsdl:input message="tns:Get_kijiCDSoapIn" />
+      <wsdl:output message="tns:Get_kijiCDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_NotePrintData">
+      <wsdl:input message="tns:Get_NotePrintDataSoapIn" />
+      <wsdl:output message="tns:Get_NotePrintDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_byPostcode2">
+      <wsdl:input message="tns:Get_byPostcode2SoapIn" />
+      <wsdl:output message="tns:Get_byPostcode2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="otodoke_Ins_uploadData2">
+      <wsdl:input message="tns:otodoke_Ins_uploadData2SoapIn" />
+      <wsdl:output message="tns:otodoke_Ins_uploadData2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="goirai_Ins_uploadData2">
+      <wsdl:input message="tns:goirai_Ins_uploadData2SoapIn" />
+      <wsdl:output message="tns:goirai_Ins_uploadData2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <wsdl:input message="tns:wakeupDBSoapIn" />
+      <wsdl:output message="tns:wakeupDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB2">
+      <wsdl:input message="tns:wakeupDB2SoapIn" />
+      <wsdl:output message="tns:wakeupDB2SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="Get_hatuten3">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_hatuten3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sel_Section">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Sel_Section" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Claim">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_Claim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Claim2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_Claim2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sel_Postcode">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Sel_Postcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sel_Postcode1">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Sel_Postcode1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_login">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Set_login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_csvwrite">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_csvwrite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sel_MemberTn">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Sel_MemberTn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sel_Member">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Sel_Member" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_MemberTn">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_MemberTn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_MemberTn3">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_MemberTn3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Goirainusi2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_Goirainusi2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Sirainusi2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_Sirainusi2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_InvoicePrintData">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_InvoicePrintData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_InvoiceNo">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Set_InvoiceNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_InvoiceNo">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_InvoiceNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_hatuten2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_hatuten2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_syuuyakuten2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_syuuyakuten2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upd_syukka2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Upd_syukka2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ins_syukka">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Ins_syukka" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_byPostcodeM">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_byPostcodeM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_byKenShiM">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_byKenShiM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_byKenShi">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_byKenShi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_byPostcode">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_byPostcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ins_Mosikomi">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Ins_Mosikomi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_KaniSaiban">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_KaniSaiban" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upd_Mosikomi">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Upd_Mosikomi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_autoEntryPref3">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_autoEntryPref3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_kijiCD">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_kijiCD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_NotePrintData">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_NotePrintData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_byPostcode2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_byPostcode2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="otodoke_Ins_uploadData2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/otodoke_Ins_uploadData2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="goirai_Ins_uploadData2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/goirai_Ins_uploadData2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/wakeupDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/wakeupDB2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">is2oji</documentation>
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://wwwis2.fukutsu.co.jp/is2/is2oji/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

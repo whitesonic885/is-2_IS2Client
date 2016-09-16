@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="送り状データ" targetNamespace="http://tempuri.org/送り状データ.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/送り状データ.xsd" xmlns:mstns="http://tempuri.org/送り状データ.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="送り状データ" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="table送り状">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="荷受人_xFF23__xFF24_" type="xs:string" minOccurs="0" />
+							<xs:element name="荷受人電話番号" type="xs:string" minOccurs="0" />
+							<xs:element name="荷受人住所県" type="xs:string" minOccurs="0" />
+							<xs:element name="荷受人住所市" type="xs:string" minOccurs="0" />
+							<xs:element name="荷受人住所町" type="xs:string" minOccurs="0" />
+							<xs:element name="荷受人住所_xFF11_" type="xs:string" minOccurs="0" />
+							<xs:element name="荷受人住所_xFF12_" type="xs:string" minOccurs="0" />
+							<xs:element name="荷受人住所_xFF13_" type="xs:string" minOccurs="0" />
+							<xs:element name="荷受人名前_xFF11_" type="xs:string" minOccurs="0" />
+							<xs:element name="荷受人名前_xFF12_" type="xs:string" minOccurs="0" />
+							<xs:element name="荷受人名前_xFF13_" type="xs:string" minOccurs="0" />
+							<xs:element name="出荷日年" type="xs:string" minOccurs="0" />
+							<xs:element name="出荷日月" type="xs:string" minOccurs="0" />
+							<xs:element name="出荷日日" type="xs:string" minOccurs="0" />
+							<xs:element name="送り状番号" type="xs:string" minOccurs="0" />
+							<xs:element name="バーコード" type="xs:string" minOccurs="0" />
+							<xs:element name="着店_xFF23__xFF24_" type="xs:string" minOccurs="0" />
+							<xs:element name="発店_xFF23__xFF24_" type="xs:string" minOccurs="0" />
+							<xs:element name="荷送人電話番号" type="xs:string" minOccurs="0" />
+							<xs:element name="荷送人住所_xFF11_" type="xs:string" minOccurs="0" />
+							<xs:element name="荷送人住所_xFF12_" type="xs:string" minOccurs="0" />
+							<xs:element name="荷送人住所_xFF13_" type="xs:string" minOccurs="0" />
+							<xs:element name="荷送人名前_xFF11_" type="xs:string" minOccurs="0" />
+							<xs:element name="荷送人名前_xFF12_" type="xs:string" minOccurs="0" />
+							<xs:element name="担当者" type="xs:string" minOccurs="0" />
+							<xs:element name="個数" type="xs:string" minOccurs="0" />
+							<xs:element name="連番" type="xs:string" minOccurs="0" />
+							<xs:element name="重量" type="xs:string" minOccurs="0" />
+							<xs:element name="保険料" type="xs:string" minOccurs="0" />
+							<xs:element name="指定日" type="xs:string" minOccurs="0" />
+							<xs:element name="お客様番号" type="xs:string" minOccurs="0" />
+							<xs:element name="輸送記事_xFF11_" type="xs:string" minOccurs="0" />
+							<xs:element name="輸送記事_xFF12_" type="xs:string" minOccurs="0" />
+							<xs:element name="品名記事_xFF11_" type="xs:string" minOccurs="0" />
+							<xs:element name="品名記事_xFF12_" type="xs:string" minOccurs="0" />
+							<xs:element name="品名記事_xFF13_" type="xs:string" minOccurs="0" />
+							<xs:element name="品名記事_xFF14_" type="xs:string" minOccurs="0" />
+							<xs:element name="品名記事_xFF15_" type="xs:string" minOccurs="0" />
+							<xs:element name="品名記事_xFF16_" type="xs:string" minOccurs="0" />
+							<xs:element name="印刷順" type="xs:int" minOccurs="0" />
+							<xs:element name="仕分_xFF23__xFF24_" type="xs:string" minOccurs="0" />
+							<xs:element name="発店名" type="xs:string" minOccurs="0" />
+							<xs:element name="荷受人フォントサイズ拡大FLG" type="xs:string" minOccurs="0" />
+							<xs:element name="荷受人郵便番号" type="xs:string" minOccurs="0" />
+							<xs:element name="荷送人郵便番号" type="xs:string" minOccurs="0" />
+							<xs:element name="王子運送FLG" type="xs:string" minOccurs="0" />
+							<xs:element name="重量入力制御" type="xs:string" minOccurs="0" />
+							<xs:element name="着店名" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Walkthrough/XmlWebServices/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://Walkthrough/XmlWebServices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Walkthrough/XmlWebServices/">
+      <s:element name="Get_Message">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_MessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_MessageResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_OshiraseTopN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_OshiraseTopNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_OshiraseTopNResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_Oshirase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_OshiraseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sel_OshiraseResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_Oshirase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_OshiraseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ins_OshiraseResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_Oshirase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_OshiraseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upd_OshiraseResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_Oshirase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_OshiraseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Del_OshiraseResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_HyoujiFG">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_HyoujiFGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upd_HyoujiFGResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB">
+        <s:complexType />
+      </s:element>
+      <s:element name="wakeupDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wakeupDBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iConCnt" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wakeupDB2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_MessageSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Message" />
+  </wsdl:message>
+  <wsdl:message name="Get_MessageSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_MessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_OshiraseTopNSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_OshiraseTopN" />
+  </wsdl:message>
+  <wsdl:message name="Get_OshiraseTopNSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_OshiraseTopNResponse" />
+  </wsdl:message>
+  <wsdl:message name="Sel_OshiraseSoapIn">
+    <wsdl:part name="parameters" element="tns:Sel_Oshirase" />
+  </wsdl:message>
+  <wsdl:message name="Sel_OshiraseSoapOut">
+    <wsdl:part name="parameters" element="tns:Sel_OshiraseResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ins_OshiraseSoapIn">
+    <wsdl:part name="parameters" element="tns:Ins_Oshirase" />
+  </wsdl:message>
+  <wsdl:message name="Ins_OshiraseSoapOut">
+    <wsdl:part name="parameters" element="tns:Ins_OshiraseResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upd_OshiraseSoapIn">
+    <wsdl:part name="parameters" element="tns:Upd_Oshirase" />
+  </wsdl:message>
+  <wsdl:message name="Upd_OshiraseSoapOut">
+    <wsdl:part name="parameters" element="tns:Upd_OshiraseResponse" />
+  </wsdl:message>
+  <wsdl:message name="Del_OshiraseSoapIn">
+    <wsdl:part name="parameters" element="tns:Del_Oshirase" />
+  </wsdl:message>
+  <wsdl:message name="Del_OshiraseSoapOut">
+    <wsdl:part name="parameters" element="tns:Del_OshiraseResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upd_HyoujiFGSoapIn">
+    <wsdl:part name="parameters" element="tns:Upd_HyoujiFG" />
+  </wsdl:message>
+  <wsdl:message name="Upd_HyoujiFGSoapOut">
+    <wsdl:part name="parameters" element="tns:Upd_HyoujiFGResponse" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapIn">
+    <wsdl:part name="parameters" element="tns:wakeupDB" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapOut">
+    <wsdl:part name="parameters" element="tns:wakeupDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDB2SoapIn">
+    <wsdl:part name="parameters" element="tns:wakeupDB2" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDB2SoapOut">
+    <wsdl:part name="parameters" element="tns:wakeupDB2Response" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="Get_Message">
+      <wsdl:input message="tns:Get_MessageSoapIn" />
+      <wsdl:output message="tns:Get_MessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_OshiraseTopN">
+      <wsdl:input message="tns:Get_OshiraseTopNSoapIn" />
+      <wsdl:output message="tns:Get_OshiraseTopNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sel_Oshirase">
+      <wsdl:input message="tns:Sel_OshiraseSoapIn" />
+      <wsdl:output message="tns:Sel_OshiraseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ins_Oshirase">
+      <wsdl:input message="tns:Ins_OshiraseSoapIn" />
+      <wsdl:output message="tns:Ins_OshiraseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upd_Oshirase">
+      <wsdl:input message="tns:Upd_OshiraseSoapIn" />
+      <wsdl:output message="tns:Upd_OshiraseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Del_Oshirase">
+      <wsdl:input message="tns:Del_OshiraseSoapIn" />
+      <wsdl:output message="tns:Del_OshiraseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upd_HyoujiFG">
+      <wsdl:input message="tns:Upd_HyoujiFGSoapIn" />
+      <wsdl:output message="tns:Upd_HyoujiFGSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <wsdl:input message="tns:wakeupDBSoapIn" />
+      <wsdl:output message="tns:wakeupDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB2">
+      <wsdl:input message="tns:wakeupDB2SoapIn" />
+      <wsdl:output message="tns:wakeupDB2SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="Get_Message">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_Message" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_OshiraseTopN">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_OshiraseTopN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sel_Oshirase">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Sel_Oshirase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ins_Oshirase">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Ins_Oshirase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upd_Oshirase">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Upd_Oshirase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Del_Oshirase">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Del_Oshirase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upd_HyoujiFG">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Upd_HyoujiFG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/wakeupDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/wakeupDB2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">is2oshirase</documentation>
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://wwwis2.fukutsu.co.jp/is2/is2oshirase/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="ご依頼主データ" targetNamespace="http://tempuri.org/ご依頼主データ.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/ご依頼主データ.xsd" xmlns:mstns="http://tempuri.org/ご依頼主データ.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="ご依頼主データ" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="tableご依頼主">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="番号" type="xs:int" minOccurs="0" />
+							<xs:element name="コード" type="xs:string" minOccurs="0" />
+							<xs:element name="カナ略称" type="xs:string" minOccurs="0" />
+							<xs:element name="電話番号" type="xs:string" minOccurs="0" />
+							<xs:element name="郵便番号" type="xs:string" minOccurs="0" />
+							<xs:element name="住所" type="xs:string" minOccurs="0" />
+							<xs:element name="名前" type="xs:string" minOccurs="0" />
+							<xs:element name="重量" type="xs:double" minOccurs="0" />
+							<xs:element name="得意先コード" type="xs:string" minOccurs="0" />
+							<xs:element name="得意先部課コード" type="xs:string" minOccurs="0" />
+							<xs:element name="得意先部課名" type="xs:string" minOccurs="0" />
+							<xs:element name="重量入力制御" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="自動出荷エラーデータ" targetNamespace="http://tempuri.org/自動出荷エラーデータ.xsd" elementFormDefault="qualified"
+	attributeFormDefault="qualified" xmlns="http://tempuri.org/自動出荷エラーデータ.xsd" xmlns:mstns="http://tempuri.org/自動出荷エラーデータ.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="自動出荷エラーデータ" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="table自動出荷エラー">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="番号" type="xs:int" minOccurs="0" />
+							<xs:element name="エラー行" type="xs:string" minOccurs="0" />
+							<xs:element name="エラー内容" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

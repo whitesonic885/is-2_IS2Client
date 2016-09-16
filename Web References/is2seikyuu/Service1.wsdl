@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Walkthrough/XmlWebServices/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://Walkthrough/XmlWebServices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Walkthrough/XmlWebServices/">
+      <s:element name="Get_Claim">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_ClaimResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ClaimResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_Claim">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTBcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_ClaimResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sel_ClaimResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_seikyuucnt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sYubin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTbcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_seikyuucntResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_seikyuucntResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_Claim">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_ClaimResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ins_ClaimResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_Claim">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_ClaimResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upd_ClaimResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_Claim">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_ClaimResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Del_ClaimResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_IrainusiSeikyuu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sel_IrainusiSeikyuuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sel_IrainusiSeikyuuResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB">
+        <s:complexType />
+      </s:element>
+      <s:element name="wakeupDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wakeupDBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_ClaimSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Claim" />
+  </wsdl:message>
+  <wsdl:message name="Get_ClaimSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="Sel_ClaimSoapIn">
+    <wsdl:part name="parameters" element="tns:Sel_Claim" />
+  </wsdl:message>
+  <wsdl:message name="Sel_ClaimSoapOut">
+    <wsdl:part name="parameters" element="tns:Sel_ClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_seikyuucntSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_seikyuucnt" />
+  </wsdl:message>
+  <wsdl:message name="Get_seikyuucntSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_seikyuucntResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ins_ClaimSoapIn">
+    <wsdl:part name="parameters" element="tns:Ins_Claim" />
+  </wsdl:message>
+  <wsdl:message name="Ins_ClaimSoapOut">
+    <wsdl:part name="parameters" element="tns:Ins_ClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upd_ClaimSoapIn">
+    <wsdl:part name="parameters" element="tns:Upd_Claim" />
+  </wsdl:message>
+  <wsdl:message name="Upd_ClaimSoapOut">
+    <wsdl:part name="parameters" element="tns:Upd_ClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="Del_ClaimSoapIn">
+    <wsdl:part name="parameters" element="tns:Del_Claim" />
+  </wsdl:message>
+  <wsdl:message name="Del_ClaimSoapOut">
+    <wsdl:part name="parameters" element="tns:Del_ClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="Sel_IrainusiSeikyuuSoapIn">
+    <wsdl:part name="parameters" element="tns:Sel_IrainusiSeikyuu" />
+  </wsdl:message>
+  <wsdl:message name="Sel_IrainusiSeikyuuSoapOut">
+    <wsdl:part name="parameters" element="tns:Sel_IrainusiSeikyuuResponse" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapIn">
+    <wsdl:part name="parameters" element="tns:wakeupDB" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapOut">
+    <wsdl:part name="parameters" element="tns:wakeupDBResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="Get_Claim">
+      <wsdl:input message="tns:Get_ClaimSoapIn" />
+      <wsdl:output message="tns:Get_ClaimSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sel_Claim">
+      <wsdl:input message="tns:Sel_ClaimSoapIn" />
+      <wsdl:output message="tns:Sel_ClaimSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_seikyuucnt">
+      <wsdl:input message="tns:Get_seikyuucntSoapIn" />
+      <wsdl:output message="tns:Get_seikyuucntSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ins_Claim">
+      <wsdl:input message="tns:Ins_ClaimSoapIn" />
+      <wsdl:output message="tns:Ins_ClaimSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upd_Claim">
+      <wsdl:input message="tns:Upd_ClaimSoapIn" />
+      <wsdl:output message="tns:Upd_ClaimSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Del_Claim">
+      <wsdl:input message="tns:Del_ClaimSoapIn" />
+      <wsdl:output message="tns:Del_ClaimSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sel_IrainusiSeikyuu">
+      <wsdl:input message="tns:Sel_IrainusiSeikyuuSoapIn" />
+      <wsdl:output message="tns:Sel_IrainusiSeikyuuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <wsdl:input message="tns:wakeupDBSoapIn" />
+      <wsdl:output message="tns:wakeupDBSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="Get_Claim">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_Claim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sel_Claim">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Sel_Claim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_seikyuucnt">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_seikyuucnt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ins_Claim">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Ins_Claim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upd_Claim">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Upd_Claim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Del_Claim">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Del_Claim" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sel_IrainusiSeikyuu">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Sel_IrainusiSeikyuu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/wakeupDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">is2seikyuu</documentation>
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://wwwis2.fukutsu.co.jp/is2/is2seikyuu/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

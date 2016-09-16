@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Walkthrough/XmlWebServices/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://Walkthrough/XmlWebServices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Walkthrough/XmlWebServices/">
+      <s:element name="Get_InvoicePrintData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_InvoicePrintDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_InvoicePrintDataResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_InvoiceNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_InvoiceNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_InvoiceNoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Set_InvoiceNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Set_InvoiceNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Set_InvoiceNoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ConsignorPrintData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ConsignorPrintDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ConsignorPrintDataResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_ConsigneePrintData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ConsigneePrintDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ConsigneePrintDataResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_NotePrintData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_NotePrintDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_NotePrintDataResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Unpublished">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_UnpublishedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_UnpublishedResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ShippedUnpublished">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ShippedUnpublishedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ShippedUnpublishedResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PublishedPrintData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSyuka" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEday" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PublishedPrintDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_PublishedPrintDataResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ConsigneePrintData2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKana" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortLabel1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortPat1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortLabel2" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortPat2" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ConsigneePrintData2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ConsigneePrintData2Result" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ConsigneePrintData3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKana" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sTelNo3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortLabel1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortPat1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortLabel2" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSortPat2" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUpdateDay" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ConsigneePrintData3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ConsigneePrintData3Result" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PublishedPrintData2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSyuka" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sIraiCd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PublishedPrintData2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_PublishedPrintData2Result" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PublishedPrintData3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iSyuka" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sIraiCd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sJyoutai" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PublishedPrintData3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_PublishedPrintData3Result" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PublishedPrintData4">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PublishedPrintData4Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_PublishedPrintData4Result" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_DeliShop">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_DeliShopResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_DeliShopResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ShopZip">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ShopZipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ShopZipResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ShopType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ShopTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ShopTypeResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PrefDeliShop">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKey" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PrefDeliShopResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_PrefDeliShopResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB">
+        <s:complexType />
+      </s:element>
+      <s:element name="wakeupDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wakeupDBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iConCnt" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wakeupDB2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_InvoicePrintDataSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_InvoicePrintData" />
+  </wsdl:message>
+  <wsdl:message name="Get_InvoicePrintDataSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_InvoicePrintDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_InvoiceNoSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_InvoiceNo" />
+  </wsdl:message>
+  <wsdl:message name="Get_InvoiceNoSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_InvoiceNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Set_InvoiceNoSoapIn">
+    <wsdl:part name="parameters" element="tns:Set_InvoiceNo" />
+  </wsdl:message>
+  <wsdl:message name="Set_InvoiceNoSoapOut">
+    <wsdl:part name="parameters" element="tns:Set_InvoiceNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ConsignorPrintDataSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ConsignorPrintData" />
+  </wsdl:message>
+  <wsdl:message name="Get_ConsignorPrintDataSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ConsignorPrintDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ConsigneePrintDataSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ConsigneePrintData" />
+  </wsdl:message>
+  <wsdl:message name="Get_ConsigneePrintDataSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ConsigneePrintDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_NotePrintDataSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_NotePrintData" />
+  </wsdl:message>
+  <wsdl:message name="Get_NotePrintDataSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_NotePrintDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_UnpublishedSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Unpublished" />
+  </wsdl:message>
+  <wsdl:message name="Get_UnpublishedSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_UnpublishedResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ShippedUnpublishedSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ShippedUnpublished" />
+  </wsdl:message>
+  <wsdl:message name="Get_ShippedUnpublishedSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ShippedUnpublishedResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_PublishedPrintDataSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_PublishedPrintData" />
+  </wsdl:message>
+  <wsdl:message name="Get_PublishedPrintDataSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_PublishedPrintDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ConsigneePrintData2SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ConsigneePrintData2" />
+  </wsdl:message>
+  <wsdl:message name="Get_ConsigneePrintData2SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ConsigneePrintData2Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_ConsigneePrintData3SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ConsigneePrintData3" />
+  </wsdl:message>
+  <wsdl:message name="Get_ConsigneePrintData3SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ConsigneePrintData3Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_PublishedPrintData2SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_PublishedPrintData2" />
+  </wsdl:message>
+  <wsdl:message name="Get_PublishedPrintData2SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_PublishedPrintData2Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_PublishedPrintData3SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_PublishedPrintData3" />
+  </wsdl:message>
+  <wsdl:message name="Get_PublishedPrintData3SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_PublishedPrintData3Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_PublishedPrintData4SoapIn">
+    <wsdl:part name="parameters" element="tns:Get_PublishedPrintData4" />
+  </wsdl:message>
+  <wsdl:message name="Get_PublishedPrintData4SoapOut">
+    <wsdl:part name="parameters" element="tns:Get_PublishedPrintData4Response" />
+  </wsdl:message>
+  <wsdl:message name="Get_DeliShopSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_DeliShop" />
+  </wsdl:message>
+  <wsdl:message name="Get_DeliShopSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_DeliShopResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ShopZipSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ShopZip" />
+  </wsdl:message>
+  <wsdl:message name="Get_ShopZipSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ShopZipResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ShopTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ShopType" />
+  </wsdl:message>
+  <wsdl:message name="Get_ShopTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ShopTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_PrefDeliShopSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_PrefDeliShop" />
+  </wsdl:message>
+  <wsdl:message name="Get_PrefDeliShopSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_PrefDeliShopResponse" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapIn">
+    <wsdl:part name="parameters" element="tns:wakeupDB" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapOut">
+    <wsdl:part name="parameters" element="tns:wakeupDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDB2SoapIn">
+    <wsdl:part name="parameters" element="tns:wakeupDB2" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDB2SoapOut">
+    <wsdl:part name="parameters" element="tns:wakeupDB2Response" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="Get_InvoicePrintData">
+      <wsdl:input message="tns:Get_InvoicePrintDataSoapIn" />
+      <wsdl:output message="tns:Get_InvoicePrintDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_InvoiceNo">
+      <wsdl:input message="tns:Get_InvoiceNoSoapIn" />
+      <wsdl:output message="tns:Get_InvoiceNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_InvoiceNo">
+      <wsdl:input message="tns:Set_InvoiceNoSoapIn" />
+      <wsdl:output message="tns:Set_InvoiceNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ConsignorPrintData">
+      <wsdl:input message="tns:Get_ConsignorPrintDataSoapIn" />
+      <wsdl:output message="tns:Get_ConsignorPrintDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ConsigneePrintData">
+      <wsdl:input message="tns:Get_ConsigneePrintDataSoapIn" />
+      <wsdl:output message="tns:Get_ConsigneePrintDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_NotePrintData">
+      <wsdl:input message="tns:Get_NotePrintDataSoapIn" />
+      <wsdl:output message="tns:Get_NotePrintDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Unpublished">
+      <wsdl:input message="tns:Get_UnpublishedSoapIn" />
+      <wsdl:output message="tns:Get_UnpublishedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ShippedUnpublished">
+      <wsdl:input message="tns:Get_ShippedUnpublishedSoapIn" />
+      <wsdl:output message="tns:Get_ShippedUnpublishedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PublishedPrintData">
+      <wsdl:input message="tns:Get_PublishedPrintDataSoapIn" />
+      <wsdl:output message="tns:Get_PublishedPrintDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ConsigneePrintData2">
+      <wsdl:input message="tns:Get_ConsigneePrintData2SoapIn" />
+      <wsdl:output message="tns:Get_ConsigneePrintData2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ConsigneePrintData3">
+      <wsdl:input message="tns:Get_ConsigneePrintData3SoapIn" />
+      <wsdl:output message="tns:Get_ConsigneePrintData3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PublishedPrintData2">
+      <wsdl:input message="tns:Get_PublishedPrintData2SoapIn" />
+      <wsdl:output message="tns:Get_PublishedPrintData2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PublishedPrintData3">
+      <wsdl:input message="tns:Get_PublishedPrintData3SoapIn" />
+      <wsdl:output message="tns:Get_PublishedPrintData3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PublishedPrintData4">
+      <wsdl:input message="tns:Get_PublishedPrintData4SoapIn" />
+      <wsdl:output message="tns:Get_PublishedPrintData4SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_DeliShop">
+      <wsdl:input message="tns:Get_DeliShopSoapIn" />
+      <wsdl:output message="tns:Get_DeliShopSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ShopZip">
+      <wsdl:input message="tns:Get_ShopZipSoapIn" />
+      <wsdl:output message="tns:Get_ShopZipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ShopType">
+      <wsdl:input message="tns:Get_ShopTypeSoapIn" />
+      <wsdl:output message="tns:Get_ShopTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PrefDeliShop">
+      <wsdl:input message="tns:Get_PrefDeliShopSoapIn" />
+      <wsdl:output message="tns:Get_PrefDeliShopSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <wsdl:input message="tns:wakeupDBSoapIn" />
+      <wsdl:output message="tns:wakeupDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB2">
+      <wsdl:input message="tns:wakeupDB2SoapIn" />
+      <wsdl:output message="tns:wakeupDB2SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="Get_InvoicePrintData">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_InvoicePrintData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_InvoiceNo">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_InvoiceNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_InvoiceNo">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Set_InvoiceNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ConsignorPrintData">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_ConsignorPrintData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ConsigneePrintData">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_ConsigneePrintData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_NotePrintData">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_NotePrintData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Unpublished">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_Unpublished" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ShippedUnpublished">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_ShippedUnpublished" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PublishedPrintData">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_PublishedPrintData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ConsigneePrintData2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_ConsigneePrintData2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ConsigneePrintData3">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_ConsigneePrintData3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PublishedPrintData2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_PublishedPrintData2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PublishedPrintData3">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_PublishedPrintData3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PublishedPrintData4">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_PublishedPrintData4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_DeliShop">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_DeliShop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ShopZip">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_ShopZip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ShopType">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_ShopType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PrefDeliShop">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_PrefDeliShop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/wakeupDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB2">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/wakeupDB2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">is2print</documentation>
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://wwwis2.fukutsu.co.jp/is2/is2print/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

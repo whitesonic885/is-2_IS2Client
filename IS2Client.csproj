@@ -1,0 +1,1113 @@
+<VisualStudioProject>
+    <CSHARP
+        ProjectType = "Local"
+        ProductVersion = "7.10.6030"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{10A100D1-9686-400A-8313-2AC9A8F13BD5}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = "App.ico"
+                AssemblyKeyContainerName = ""
+                AssemblyName = "IS2Client"
+                AssemblyOriginatorKeyFile = ""
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "Library"
+                PreBuildEvent = ""
+                PostBuildEvent = 'copy IS2Client.dll "C:\Program Files\is-2\app\.'
+                RootNamespace = "IS2Client"
+                RunPostBuildEvent = "OnBuildSuccess"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    AllowUnsafeBlocks = "true"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "DEBUG;TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "true"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "false"
+                    OutputPath = "bin\Debug\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+                <Config
+                    Name = "Release"
+                    AllowUnsafeBlocks = "true"
+                    BaseAddress = "285212672"
+                    CheckForOverflowUnderflow = "false"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = "TRACE"
+                    DocumentationFile = ""
+                    DebugSymbols = "false"
+                    FileAlignment = "4096"
+                    IncrementalBuild = "false"
+                    NoStdLib = "false"
+                    NoWarn = ""
+                    Optimize = "true"
+                    OutputPath = "bin\Release\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "4"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                    HintPath = "..\..\..\..\..\WINNT\Microsoft.NET\Framework\v1.1.4322\System.dll"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                    HintPath = "..\..\..\..\..\WINNT\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                    HintPath = "..\..\..\..\..\WINNT\Microsoft.NET\Framework\v1.1.4322\System.Drawing.dll"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                    HintPath = "..\..\..\..\..\WINNT\Microsoft.NET\Framework\v1.1.4322\System.Windows.Forms.dll"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                    HintPath = "..\..\..\..\..\WINNT\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                />
+                <Reference
+                    Name = "MSDATASRC"
+                    Guid = "{7C0FFAB0-CD84-11D0-949A-00A0C91110ED}"
+                    VersionMajor = "1"
+                    VersionMinor = "0"
+                    Lcid = "0"
+                    WrapperTool = "primary"
+                />
+                <Reference
+                    Name = "stdole"
+                    Guid = "{00020430-0000-0000-C000-000000000046}"
+                    VersionMajor = "2"
+                    VersionMinor = "0"
+                    Lcid = "0"
+                    WrapperTool = "primary"
+                />
+                <Reference
+                    Name = "GTABLE32V2Lib"
+                    Guid = "{3BA63D60-AE52-11CF-968C-00000E4A0ADF}"
+                    VersionMajor = "2"
+                    VersionMinor = "0"
+                    Lcid = "0"
+                    WrapperTool = "tlbimp"
+                />
+                <Reference
+                    Name = "AxGTABLE32V2Lib"
+                    Guid = "{3BA63D60-AE52-11CF-968C-00000E4A0ADF}"
+                    VersionMajor = "2"
+                    VersionMinor = "0"
+                    Lcid = "0"
+                    WrapperTool = "aximp"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                />
+                <Reference
+                    Name = "CrystalDecisions.CrystalReports.Engine"
+                    AssemblyName = "CrystalDecisions.CrystalReports.Engine"
+                    HintPath = "C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.CrystalReports.Engine.dll"
+                    AssemblyFolderKey = "hklm\crystal.net"
+                />
+                <Reference
+                    Name = "CrystalDecisions.ReportSource"
+                    AssemblyName = "CrystalDecisions.ReportSource"
+                    HintPath = "C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.ReportSource.dll"
+                    AssemblyFolderKey = "hklm\crystal.net"
+                />
+                <Reference
+                    Name = "CrystalDecisions.Shared"
+                    AssemblyName = "CrystalDecisions.Shared"
+                    HintPath = "C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.Shared.dll"
+                    AssemblyFolderKey = "hklm\crystal.net"
+                />
+                <Reference
+                    Name = "CrystalDecisions.Windows.Forms"
+                    AssemblyName = "CrystalDecisions.Windows.Forms"
+                    HintPath = "C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.Windows.Forms.dll"
+                    AssemblyFolderKey = "hklm\crystal.net"
+                />
+                <Reference
+                    Name = "Microsoft.VisualBasic"
+                    AssemblyName = "Microsoft.VisualBasic"
+                    HintPath = "D:\WINNT\Microsoft.NET\Framework\v1.1.4322\Microsoft.VisualBasic.dll"
+                />
+                <Reference
+                    Name = "CharConvUtility"
+                    AssemblyName = "CharConvUtility"
+                    HintPath = "CharConvUtility.dll"
+                />
+            </References>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "app.config"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "App.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ShellLink.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ƒAƒCƒRƒ“‘I‘ð.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ƒAƒCƒRƒ“‘I‘ð.resx"
+                    DependentUpon = "ƒAƒCƒRƒ“‘I‘ð.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‚¨’m‚ç‚¹ŒfŽ¦.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "‚¨’m‚ç‚¹ŒfŽ¦.resx"
+                    DependentUpon = "‚¨’m‚ç‚¹ŒfŽ¦.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‚¨’m‚ç‚¹‘èƒ{ƒ^ƒ“.cs"
+                    SubType = "UserControl"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "‚¨’m‚ç‚¹‘èƒ{ƒ^ƒ“.resx"
+                    DependentUpon = "‚¨’m‚ç‚¹‘èƒ{ƒ^ƒ“.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‚¨“Í‚¯æŒŸõ.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "‚¨“Í‚¯æŒŸõ.resx"
+                    DependentUpon = "‚¨“Í‚¯æŒŸõ.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‚¨“Í‚¯æŽæž.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "‚¨“Í‚¯æŽæž.resx"
+                    DependentUpon = "‚¨“Í‚¯æŽæž.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‚¨“Í‚¯æ“o˜^.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "‚¨“Í‚¯æ“o˜^.resx"
+                    DependentUpon = "‚¨“Í‚¯æ“o˜^.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‚¨“Í‚¯æ“o˜^¬.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "‚¨“Í‚¯æ“o˜^¬.resx"
+                    DependentUpon = "‚¨“Í‚¯æ“o˜^¬.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‚¨“Íæƒf[ƒ^.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "‚¨“Íæƒf[ƒ^.cs"
+                />
+                <File
+                    RelPath = "‚¨“Íæƒf[ƒ^.cs"
+                    DependentUpon = "‚¨“Íæƒf[ƒ^.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "‚¨“Íæƒf[ƒ^.xsx"
+                    DependentUpon = "‚¨“Íæƒf[ƒ^.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "‚¨“Íæ’ •[.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "‚¨“Íæ’ •[.cs"
+                />
+                <File
+                    RelPath = "‚¨“Íæ’ •[.cs"
+                    DependentUpon = "‚¨“Íæ’ •[.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "‚²ˆË—ŠŽåƒf[ƒ^.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "‚²ˆË—ŠŽåƒf[ƒ^.cs"
+                />
+                <File
+                    RelPath = "‚²ˆË—ŠŽåƒf[ƒ^.cs"
+                    DependentUpon = "‚²ˆË—ŠŽåƒf[ƒ^.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "‚²ˆË—ŠŽåƒf[ƒ^.xsx"
+                    DependentUpon = "‚²ˆË—ŠŽåƒf[ƒ^.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "‚²ˆË—ŠŽåŒŸõ.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "‚²ˆË—ŠŽåŒŸõ.resx"
+                    DependentUpon = "‚²ˆË—ŠŽåŒŸõ.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‚²ˆË—ŠŽåŽæž.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "‚²ˆË—ŠŽåŽæž.resx"
+                    DependentUpon = "‚²ˆË—ŠŽåŽæž.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‚²ˆË—ŠŽå’ •[.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "‚²ˆË—ŠŽå’ •[.cs"
+                />
+                <File
+                    RelPath = "‚²ˆË—ŠŽå’ •[.cs"
+                    DependentUpon = "‚²ˆË—ŠŽå’ •[.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "‚²ˆË—ŠŽå“o˜^.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "‚²ˆË—ŠŽå“o˜^.resx"
+                    DependentUpon = "‚²ˆË—ŠŽå“o˜^.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ƒpƒXƒ[ƒh•ÏX.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ƒpƒXƒ[ƒh•ÏX.resx"
+                    DependentUpon = "ƒpƒXƒ[ƒh•ÏX.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ƒvƒŒƒrƒ…[‰æ–Ê.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ƒvƒŒƒrƒ…[‰æ–Ê.resx"
+                    DependentUpon = "ƒvƒŒƒrƒ…[‰æ–Ê.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ƒwƒ‹ƒv.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ƒwƒ‹ƒv.resx"
+                    DependentUpon = "ƒwƒ‹ƒv.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ƒƒjƒ…[.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ƒƒjƒ…[.resx"
+                    DependentUpon = "ƒƒjƒ…[.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ƒƒOƒCƒ“.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ƒƒOƒCƒ“.resx"
+                    DependentUpon = "ƒƒOƒCƒ“.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ƒƒOƒCƒ“‚Q.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ƒƒOƒCƒ“‚Q.resx"
+                    DependentUpon = "ƒƒOƒCƒ“‚Q.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‹LŽ–ƒf[ƒ^.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "‹LŽ–ƒf[ƒ^.cs"
+                />
+                <File
+                    RelPath = "‹LŽ–ƒf[ƒ^.cs"
+                    DependentUpon = "‹LŽ–ƒf[ƒ^.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "‹LŽ–ƒf[ƒ^.xsx"
+                    DependentUpon = "‹LŽ–ƒf[ƒ^.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "‹LŽ–ŒŸõ.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "‹LŽ–ŒŸõ.resx"
+                    DependentUpon = "‹LŽ–ŒŸõ.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‹LŽ–’ •[.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "‹LŽ–’ •[.cs"
+                />
+                <File
+                    RelPath = "‹LŽ–’ •[.cs"
+                    DependentUpon = "‹LŽ–’ •[.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "‹¤’ÊƒeƒLƒXƒgƒ{ƒbƒNƒX.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "‹¤’ÊƒeƒLƒXƒgƒ{ƒbƒNƒX.resx"
+                    DependentUpon = "‹¤’ÊƒeƒLƒXƒgƒ{ƒbƒNƒX.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‹¤’ÊƒeƒLƒXƒgƒ{ƒbƒNƒX‚Q.cs"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "‹¤’ÊƒeƒLƒXƒgƒ{ƒbƒNƒX‚Q.resx"
+                    DependentUpon = "‹¤’ÊƒeƒLƒXƒgƒ{ƒbƒNƒX‚Q.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‹¤’ÊƒtƒH[ƒ€.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "‹¤’ÊƒtƒH[ƒ€.resx"
+                    DependentUpon = "‹¤’ÊƒtƒH[ƒ€.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ŒÂ•ÊÄ”­s.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ŒÂ•ÊÄ”­s.resx"
+                    DependentUpon = "ŒÂ•ÊÄ”­s.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Ë”Ø‚è‘Ö‚¦.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Ë”Ø‚è‘Ö‚¦.resx"
+                    DependentUpon = "Ë”Ø‚è‘Ö‚¦.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Žw’èŽžŠÔ“ü—Í.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Žw’èŽžŠÔ“ü—Í.resx"
+                    DependentUpon = "Žw’èŽžŠÔ“ü—Í.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Ž©“®o‰×ƒGƒ‰[ƒf[ƒ^.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "Ž©“®o‰×ƒGƒ‰[ƒf[ƒ^.cs"
+                />
+                <File
+                    RelPath = "Ž©“®o‰×ƒGƒ‰[ƒf[ƒ^.cs"
+                    DependentUpon = "Ž©“®o‰×ƒGƒ‰[ƒf[ƒ^.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Ž©“®o‰×ƒGƒ‰[ƒf[ƒ^.xsx"
+                    DependentUpon = "Ž©“®o‰×ƒGƒ‰[ƒf[ƒ^.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Ž©“®o‰×ƒGƒ‰[’ •[.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "Ž©“®o‰×ƒGƒ‰[’ •[.cs"
+                />
+                <File
+                    RelPath = "Ž©“®o‰×ƒGƒ‰[’ •[.cs"
+                    DependentUpon = "Ž©“®o‰×ƒGƒ‰[’ •[.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Ž©“®o‰×“o˜^.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Ž©“®o‰×“o˜^.resx"
+                    DependentUpon = "Ž©“®o‰×“o˜^.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "ZŠŒŸõ.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ZŠŒŸõ.resx"
+                    DependentUpon = "ZŠŒŸõ.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "o‰×ŽÀÑ.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "o‰×ŽÀÑ.resx"
+                    DependentUpon = "o‰×ŽÀÑ.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "o‰×ŽÀÑƒf[ƒ^.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "o‰×ŽÀÑƒf[ƒ^1.cs"
+                />
+                <File
+                    RelPath = "o‰×ŽÀÑƒf[ƒ^.xsx"
+                    DependentUpon = "o‰×ŽÀÑƒf[ƒ^.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "o‰×ŽÀÑƒf[ƒ^1.cs"
+                    DependentUpon = "o‰×ŽÀÑƒf[ƒ^.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "o‰×ŽÀÑ’ •[.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "o‰×ŽÀÑ’ •[.cs"
+                />
+                <File
+                    RelPath = "o‰×ŽÀÑ’ •[.cs"
+                    DependentUpon = "o‰×ŽÀÑ’ •[.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "o‰×ŽÀÑ’ •[‚Q.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "o‰×ŽÀÑ’ •[‚Q.cs"
+                />
+                <File
+                    RelPath = "o‰×ŽÀÑ’ •[‚Q.cs"
+                    DependentUpon = "o‰×ŽÀÑ’ •[‚Q.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "o‰×ŽÀÑ’ •[‚R.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "o‰×ŽÀÑ’ •[‚R.cs"
+                />
+                <File
+                    RelPath = "o‰×ŽÀÑ’ •[‚R.cs"
+                    DependentUpon = "o‰×ŽÀÑ’ •[‚R.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "o‰×Æ‰ï.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "o‰×Æ‰ï.resx"
+                    DependentUpon = "o‰×Æ‰ï.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "o‰×“o˜^.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "o‰×“o˜^.resx"
+                    DependentUpon = "o‰×“o˜^.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‰Šú“o˜^.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "‰Šú“o˜^.resx"
+                    DependentUpon = "‰Šú“o˜^.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "—Œ^o‰×“o˜^.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "—Œ^o‰×“o˜^.resx"
+                    DependentUpon = "—Œ^o‰×“o˜^.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "—Œ^“o˜^.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "—Œ^“o˜^.resx"
+                    DependentUpon = "—Œ^“o˜^.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "¿‹æ“o˜^.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "¿‹æ“o˜^.resx"
+                    DependentUpon = "¿‹æ“o˜^.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‘—‚èóƒf[ƒ^.xsd"
+                    BuildAction = "Content"
+                    Generator = "MSDataSetGenerator"
+                    LastGenOutput = "‘—‚èóƒf[ƒ^.cs"
+                />
+                <File
+                    RelPath = "‘—‚èóƒf[ƒ^.cs"
+                    DependentUpon = "‘—‚èóƒf[ƒ^.xsd"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "‘—‚èóƒf[ƒ^.xsx"
+                    DependentUpon = "‘—‚èóƒf[ƒ^.xsd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "‘—‚èóT‚¦‚`‚S’ •[.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "‘—‚èóT‚¦‚`‚S’ •[.cs"
+                />
+                <File
+                    RelPath = "‘—‚èóT‚¦‚`‚S’ •[.cs"
+                    DependentUpon = "‘—‚èóT‚¦‚`‚S’ •[.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "‘—‚èóT‚¦ˆóü.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "‘—‚èóT‚¦ˆóü.resx"
+                    DependentUpon = "‘—‚èóT‚¦ˆóü.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "‘—‚èó’ •[‚R.rpt"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "CrystalDecisions.VSShell.CodeGen.ReportCodeGenerator"
+                    LastGenOutput = "‘—‚èó’ •[‚R.cs"
+                />
+                <File
+                    RelPath = "‘—‚èó’ •[‚R.cs"
+                    DependentUpon = "‘—‚èó’ •[‚R.rpt"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "’[––“o˜^.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "’[––“o˜^.resx"
+                    DependentUpon = "’[––“o˜^.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "“XŠŒŸõ.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "“XŠŒŸõ.resx"
+                    DependentUpon = "“XŠŒŸõ.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "“ÇŽæê—p‰æ–Ê.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "“ÇŽæê—p‰æ–Ê.resx"
+                    DependentUpon = "“ÇŽæê—p‰æ–Ê.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "•”–å•ÏX‚Q.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "•”–å•ÏX‚Q.resx"
+                    DependentUpon = "•”–å•ÏX‚Q.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "–¢”­sˆóü.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "–¢”­sˆóü.resx"
+                    DependentUpon = "–¢”­sˆóü.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Web References\is2address\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.cs"
+                />
+                <File
+                    RelPath = "Web References\is2address\Reference.cs"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\is2address\Service1.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\is2address\Service1.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\is2address\"
+                    WebReferenceUrl = "http://wwwis2.fukutsu.co.jp/is2/is2address/Service1.asmx"
+                    UrlBehavior = "Dynamic"
+                />
+                <File
+                    RelPath = "Web References\is2goirai\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.cs"
+                />
+                <File
+                    RelPath = "Web References\is2goirai\Reference.cs"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\is2goirai\Service1.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\is2goirai\Service1.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\is2goirai\"
+                    WebReferenceUrl = "http://wwwis2.fukutsu.co.jp/is2/is2goirai/Service1.asmx"
+                    UrlBehavior = "Dynamic"
+                />
+                <File
+                    RelPath = "Web References\is2hinagata\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.cs"
+                />
+                <File
+                    RelPath = "Web References\is2hinagata\Reference.cs"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\is2hinagata\Service1.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\is2hinagata\Service1.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\is2hinagata\"
+                    WebReferenceUrl = "http://wwwis2.fukutsu.co.jp/is2/is2hinagata/Service1.asmx"
+                    UrlBehavior = "Dynamic"
+                />
+                <File
+                    RelPath = "Web References\is2init\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.cs"
+                />
+                <File
+                    RelPath = "Web References\is2init\Reference.cs"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\is2init\Service1.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\is2init\Service1.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\is2init\"
+                    WebReferenceUrl = "http://wwwis2.fukutsu.co.jp/is2/is2init/Service1.asmx"
+                    UrlBehavior = "Dynamic"
+                />
+                <File
+                    RelPath = "Web References\is2kiji\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.cs"
+                />
+                <File
+                    RelPath = "Web References\is2kiji\Reference.cs"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\is2kiji\Service1.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\is2kiji\Service1.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\is2kiji\"
+                    WebReferenceUrl = "http://wwwis2.fukutsu.co.jp/is2/is2kiji/Service1.asmx"
+                    UrlBehavior = "Dynamic"
+                />
+                <File
+                    RelPath = "Web References\is2oji\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.cs"
+                />
+                <File
+                    RelPath = "Web References\is2oji\Reference.cs"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\is2oji\Service1.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\is2oji\Service1.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\is2oji\"
+                    WebReferenceUrl = "http://wwwis2.fukutsu.co.jp/is2/is2oji/Service1.asmx"
+                    UrlBehavior = "Dynamic"
+                />
+                <File
+                    RelPath = "Web References\is2oshirase\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.cs"
+                />
+                <File
+                    RelPath = "Web References\is2oshirase\Reference.cs"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\is2oshirase\Service1.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\is2oshirase\Service1.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\is2oshirase\"
+                    WebReferenceUrl = "http://wwwis2.fukutsu.co.jp/is2/is2oshirase/Service1.asmx"
+                    UrlBehavior = "Dynamic"
+                />
+                <File
+                    RelPath = "Web References\is2otodoke\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.cs"
+                />
+                <File
+                    RelPath = "Web References\is2otodoke\Reference.cs"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\is2otodoke\Service1.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\is2otodoke\Service1.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\is2otodoke\"
+                    WebReferenceUrl = "http://wwwis2.fukutsu.co.jp/is2/is2otodoke/Service1.asmx"
+                    UrlBehavior = "Dynamic"
+                />
+                <File
+                    RelPath = "Web References\is2print\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.cs"
+                />
+                <File
+                    RelPath = "Web References\is2print\Reference.cs"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\is2print\Service1.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\is2print\Service1.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\is2print\"
+                    WebReferenceUrl = "http://wwwis2.fukutsu.co.jp/is2/is2print/Service1.asmx"
+                    UrlBehavior = "Dynamic"
+                />
+                <File
+                    RelPath = "Web References\is2seikyuu\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.cs"
+                />
+                <File
+                    RelPath = "Web References\is2seikyuu\Reference.cs"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\is2seikyuu\Service1.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\is2seikyuu\Service1.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\is2seikyuu\"
+                    WebReferenceUrl = "http://wwwis2.fukutsu.co.jp/is2/is2seikyuu/Service1.asmx"
+                    UrlBehavior = "Dynamic"
+                />
+                <File
+                    RelPath = "Web References\is2syukka\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.cs"
+                />
+                <File
+                    RelPath = "Web References\is2syukka\Reference.cs"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\is2syukka\Service1.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\is2syukka\Service1.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\is2syukka\"
+                    WebReferenceUrl = "http://wwwis2.fukutsu.co.jp/is2/is2syukka/Service1.asmx"
+                    UrlBehavior = "Dynamic"
+                />
+                <Folder
+                    RelPath = "Web References\"
+                    WebReferences = "TRUE"
+                />
+            </Include>
+        </Files>
+        <StartupServices>
+            <Service ID = "{CF845C55-C321-4742-B673-E6212D061ED9}" />
+        </StartupServices>
+    </CSHARP>
+</VisualStudioProject>
+

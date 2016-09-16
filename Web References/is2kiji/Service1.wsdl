@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://Walkthrough/XmlWebServices/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://Walkthrough/XmlWebServices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Walkthrough/XmlWebServices/">
+      <s:element name="Get_kiji">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_kijiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_kijiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Skiji">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_SkijiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_SkijiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_kiji">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upd_kijiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upd_kijiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_kiji">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ins_kijiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ins_kijiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_kiji">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sData" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Del_kijiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Del_kijiResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_kijiCD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sKname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_kijiCDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_kijiCDResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wakeupDB">
+        <s:complexType />
+      </s:element>
+      <s:element name="wakeupDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wakeupDBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_kijiSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_kiji" />
+  </wsdl:message>
+  <wsdl:message name="Get_kijiSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_kijiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_SkijiSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Skiji" />
+  </wsdl:message>
+  <wsdl:message name="Get_SkijiSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_SkijiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upd_kijiSoapIn">
+    <wsdl:part name="parameters" element="tns:Upd_kiji" />
+  </wsdl:message>
+  <wsdl:message name="Upd_kijiSoapOut">
+    <wsdl:part name="parameters" element="tns:Upd_kijiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ins_kijiSoapIn">
+    <wsdl:part name="parameters" element="tns:Ins_kiji" />
+  </wsdl:message>
+  <wsdl:message name="Ins_kijiSoapOut">
+    <wsdl:part name="parameters" element="tns:Ins_kijiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Del_kijiSoapIn">
+    <wsdl:part name="parameters" element="tns:Del_kiji" />
+  </wsdl:message>
+  <wsdl:message name="Del_kijiSoapOut">
+    <wsdl:part name="parameters" element="tns:Del_kijiResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_kijiCDSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_kijiCD" />
+  </wsdl:message>
+  <wsdl:message name="Get_kijiCDSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_kijiCDResponse" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapIn">
+    <wsdl:part name="parameters" element="tns:wakeupDB" />
+  </wsdl:message>
+  <wsdl:message name="wakeupDBSoapOut">
+    <wsdl:part name="parameters" element="tns:wakeupDBResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="Get_kiji">
+      <wsdl:input message="tns:Get_kijiSoapIn" />
+      <wsdl:output message="tns:Get_kijiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Skiji">
+      <wsdl:input message="tns:Get_SkijiSoapIn" />
+      <wsdl:output message="tns:Get_SkijiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upd_kiji">
+      <wsdl:input message="tns:Upd_kijiSoapIn" />
+      <wsdl:output message="tns:Upd_kijiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ins_kiji">
+      <wsdl:input message="tns:Ins_kijiSoapIn" />
+      <wsdl:output message="tns:Ins_kijiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Del_kiji">
+      <wsdl:input message="tns:Del_kijiSoapIn" />
+      <wsdl:output message="tns:Del_kijiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_kijiCD">
+      <wsdl:input message="tns:Get_kijiCDSoapIn" />
+      <wsdl:output message="tns:Get_kijiCDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <wsdl:input message="tns:wakeupDBSoapIn" />
+      <wsdl:output message="tns:wakeupDBSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="Get_kiji">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_kiji" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Skiji">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_Skiji" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upd_kiji">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Upd_kiji" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ins_kiji">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Ins_kiji" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Del_kiji">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Del_kiji" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_kijiCD">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/Get_kijiCD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wakeupDB">
+      <soap:operation soapAction="http://Walkthrough/XmlWebServices/wakeupDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">is2kiji</documentation>
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://wwwis2.fukutsu.co.jp/is2/is2kiji/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
