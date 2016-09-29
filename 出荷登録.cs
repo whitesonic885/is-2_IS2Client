@@ -2169,9 +2169,13 @@ namespace IS2Client
 			this.Name = "出荷登録";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "is-2 エントリー";
-			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.エンター移動);
-			this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.エンターキャンセル);
-			this.Load += new System.EventHandler(this.Form1_Load);
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+            //this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.エンター移動);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Onエンター移動);
+            //this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.エンターキャンセル);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Onエンターキャンセル);
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
+            this.Load += new System.EventHandler(this.Form1_Load);
 			this.Closed += new System.EventHandler(this.出荷登録_Closed);
 			this.Activated += new System.EventHandler(this.出荷登録_Activated);
 			((System.ComponentModel.ISupportInitialize)(this.ds送り状)).EndInit();
@@ -2195,6 +2199,18 @@ namespace IS2Client
 
 		}
 		#endregion
+
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+        protected void Onエンター移動(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            base.エンター移動(sender, e);
+        }
+
+        protected void Onエンターキャンセル(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            base.エンターキャンセル(sender, e);
+        }
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
 
 		/// <summary>
 		/// アプリケーションのメイン エントリ ポイントです。

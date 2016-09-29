@@ -56,9 +56,14 @@ namespace IS2Client
 		public const int MAX_PATH = 260;
 
 		public uint dwFileAttributes;
-		public System.Runtime.InteropServices.FILETIME ftCreationTime;
-		public System.Runtime.InteropServices.FILETIME ftLastAccessTime;
-		public System.Runtime.InteropServices.FILETIME ftLastWriteTime;
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+        //public System.Runtime.InteropServices.FILETIME ftCreationTime;
+        //public System.Runtime.InteropServices.FILETIME ftLastAccessTime;
+        //public System.Runtime.InteropServices.FILETIME ftLastWriteTime;
+        public System.Runtime.InteropServices.ComTypes.FILETIME ftCreationTime;
+        public System.Runtime.InteropServices.ComTypes.FILETIME ftLastAccessTime;
+        public System.Runtime.InteropServices.ComTypes.FILETIME ftLastWriteTime;
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
 		public uint nFileSizeHigh;
 		public uint nFileSizeLow;
 		public uint dwReserved0;
@@ -112,9 +117,14 @@ namespace IS2Client
 		public const int MAX_PATH = 260;
 
 		public uint     dwFileAttributes;
-		public System.Runtime.InteropServices.FILETIME ftCreationTime;
-		public System.Runtime.InteropServices.FILETIME ftLastAccessTime;
-		public System.Runtime.InteropServices.FILETIME ftLastWriteTime;
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+        //public System.Runtime.InteropServices.FILETIME ftCreationTime;
+        //public System.Runtime.InteropServices.FILETIME ftLastAccessTime;
+        //public System.Runtime.InteropServices.FILETIME ftLastWriteTime;
+        public System.Runtime.InteropServices.ComTypes.FILETIME ftCreationTime;
+        public System.Runtime.InteropServices.ComTypes.FILETIME ftLastAccessTime;
+        public System.Runtime.InteropServices.ComTypes.FILETIME ftLastWriteTime;
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
 		public uint     nFileSizeHigh;
 		public uint     nFileSizeLow;
 		public uint     dwReserved0;
@@ -494,17 +504,30 @@ namespace IS2Client
 		/// IShellLinkインターフェイスからキャストされたIPersistFileインターフェイスを取得します。
 		/// </summary>
 		/// <returns>IPersistFileインターフェイス。　取得できなかった場合はnull。</returns>
-		private UCOMIPersistFile GetIPersistFile()
-		{
-			if ( isUnicodeEnvironment )
-			{
-				return shellLinkW as UCOMIPersistFile;
-			}
-			else
-			{
-				return shellLinkA as UCOMIPersistFile;
-			}
-		}
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+        //private UCOMIPersistFile GetIPersistFile()
+        //{
+        //    if ( isUnicodeEnvironment )
+        //    {
+        //        return shellLinkW as UCOMIPersistFile;
+        //    }
+        //    else
+        //    {
+        //        return shellLinkA as UCOMIPersistFile;
+        //    }
+        //}
+        private System.Runtime.InteropServices.ComTypes.IPersistFile GetIPersistFile()
+        {
+            if (isUnicodeEnvironment)
+            {
+                return shellLinkW as System.Runtime.InteropServices.ComTypes.IPersistFile;
+            }
+            else
+            {
+                return shellLinkA as System.Runtime.InteropServices.ComTypes.IPersistFile;
+            }
+        }
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
 
 		/// <summary>
 		/// カレントファイルにショートカットを保存します。
@@ -513,7 +536,10 @@ namespace IS2Client
 		public void Save(string linkFile)
 		{
             // IPersistFileインターフェイスを取得して保存
-            UCOMIPersistFile persistFile = GetIPersistFile();
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+            //UCOMIPersistFile persistFile = GetIPersistFile();
+            System.Runtime.InteropServices.ComTypes.IPersistFile persistFile = GetIPersistFile();
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
 
             if ( persistFile == null ) throw new COMException( "IPersistFileインターフェイスを取得できませんでした。" );
 

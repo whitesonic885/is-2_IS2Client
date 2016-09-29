@@ -95,7 +95,9 @@ namespace IS2Client
 	// MOD 2016.04.15 BEVAS）松本 社内伝票機能追加対応
 	// MOD 2016.05.24 BEVAS）松本 セクション切替画面改修対応
 	// MOD 2016.06.10 BEVAS）松本 出荷実績画面のオプションチェック内容を端末毎に保存
-	//--------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
+    // MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更
+    //--------------------------------------------------------------------------
 	public class メニュー : 共通フォーム
 	{
 // MOD 2009.07.30 東都）高木 exeのdll化対応 START
@@ -4973,8 +4975,12 @@ namespace IS2Client
 			int iRet = 0;
 
 			try{
-				System.Net.GlobalProxySelection.Select = System.Net.WebProxy.GetDefaultProxy();
-				sv_init.Proxy = System.Net.WebProxy.GetDefaultProxy();
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+				//System.Net.GlobalProxySelection.Select = System.Net.WebProxy.GetDefaultProxy();
+                System.Net.WebRequest.DefaultWebProxy = System.Net.WebRequest.GetSystemWebProxy();
+				//sv_init.Proxy = System.Net.WebProxy.GetDefaultProxy();
+                sv_init.Proxy = System.Net.WebRequest.GetSystemWebProxy();
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
 
 				string sRet = sv_init.wakeupDB();
 // MOD 2010.07.30 東都）高木 デフォルトプロキシ設定の修正 START
@@ -5035,13 +5041,21 @@ namespace IS2Client
 						gProxy.Credentials = new NetworkCredential(sProxyId, sProxyPa);
 					}
 // MOD 2011.12.06 東都）高木 プロキシ認証の追加 END
-					System.Net.GlobalProxySelection.Select = gProxy;
+
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+					//System.Net.GlobalProxySelection.Select = gProxy;
+                    System.Net.WebRequest.DefaultWebProxy = gProxy;
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
 					sv_init.Proxy = gProxy;
 				}
 				else
 				{
-					System.Net.GlobalProxySelection.Select = System.Net.GlobalProxySelection.GetEmptyWebProxy();
-					sv_init.Proxy = System.Net.GlobalProxySelection.GetEmptyWebProxy();
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+					//System.Net.GlobalProxySelection.Select = System.Net.GlobalProxySelection.GetEmptyWebProxy();
+                    System.Net.WebRequest.DefaultWebProxy = null;
+					//sv_init.Proxy = System.Net.GlobalProxySelection.GetEmptyWebProxy();
+                    sv_init.Proxy = null;
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
 				}
 				string sRet = "";
 //				try
@@ -5094,15 +5108,23 @@ namespace IS2Client
 				return true;
 //			}catch (System.Net.WebException ex){
 			}catch (System.Net.WebException){
-				//元の状態に戻す
-				System.Net.GlobalProxySelection.Select = System.Net.WebProxy.GetDefaultProxy();
-				sv_init.Proxy = System.Net.WebProxy.GetDefaultProxy();
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+                //元の状態に戻す
+				//System.Net.GlobalProxySelection.Select = System.Net.WebProxy.GetDefaultProxy();
+                System.Net.WebRequest.DefaultWebProxy = System.Net.WebRequest.GetSystemWebProxy();
+				//sv_init.Proxy = System.Net.WebProxy.GetDefaultProxy();
+                sv_init.Proxy = System.Net.WebRequest.GetSystemWebProxy();
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
 				return false;
 //			}catch (Exception ex){
 			}catch (Exception){
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
 				//元の状態に戻す
-				System.Net.GlobalProxySelection.Select = System.Net.WebProxy.GetDefaultProxy();
-				sv_init.Proxy = System.Net.WebProxy.GetDefaultProxy();
+				//System.Net.GlobalProxySelection.Select = System.Net.WebProxy.GetDefaultProxy();
+                System.Net.WebRequest.DefaultWebProxy = System.Net.WebRequest.GetSystemWebProxy();
+				//sv_init.Proxy = System.Net.WebProxy.GetDefaultProxy();
+                sv_init.Proxy = System.Net.WebRequest.GetSystemWebProxy();
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
 				return false;
 			}
 		}
@@ -5291,7 +5313,8 @@ namespace IS2Client
 				xmldoc = null;
 				finfo  = null;
 			}catch(Exception ex){
-				ex = ex;
+				//ex = ex;
+                string dummy = ex.Message;
 			}
 		}
 // MOD 2010.03.01 東都）高木 端末ごとに表示条件を保持する機能の追加 END

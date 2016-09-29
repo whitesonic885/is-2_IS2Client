@@ -57,7 +57,10 @@ namespace IS2Client
 			// crví†ï[
 			// 
 			this.crví†ï[.ActiveViewIndex = -1;
-			this.crví†ï[.DisplayGroupTree = false;
+// MOD 2016.09.28 Vivouac) ãeír Visual Studio 2013å`éÆÇ…ïœçX START
+			//this.crví†ï[.DisplayGroupTree = false;
+            this.crví†ï[.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+// MOD 2016.09.28 Vivouac) ãeír Visual Studio 2013å`éÆÇ…ïœçX END
 			this.crví†ï[.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.crví†ï[.Location = new System.Drawing.Point(0, 0);
 			this.crví†ï[.Name = "crví†ï[";

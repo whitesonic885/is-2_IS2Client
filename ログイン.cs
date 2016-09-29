@@ -250,15 +250,31 @@ namespace IS2Client
 			this.Name = "ログイン";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "is-2 ログイン";
-			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.エンター移動);
-			this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.エンターキャンセル);
-			this.Load += new System.EventHandler(this.ログイン_Load);
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+            //this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.エンター移動);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Onエンター移動);
+            //this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.エンターキャンセル);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Onエンターキャンセル);
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
+            this.Load += new System.EventHandler(this.ログイン_Load);
 			this.panel1.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
 		#endregion
+
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+        protected void Onエンター移動(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            base.エンター移動(sender, e);
+        }
+
+        protected void Onエンターキャンセル(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            base.エンターキャンセル(sender, e);
+        }
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
 
 		/// <summary>
 		/// アプリケーションのメイン エントリ ポイントです。
@@ -498,7 +514,11 @@ namespace IS2Client
 				// ＩＰアドレス
 				try
 				{
-					System.Net.IPHostEntry iph = System.Net.Dns.GetHostByName(sKey[3]);
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+					//System.Net.IPHostEntry iph = System.Net.Dns.GetHostByName(sKey[3]);
+                    System.Net.IPHostEntry iph = System.Net.Dns.GetHostEntry(sKey[3]);
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
+
 // MOD 2008.07.09 東都）高木 ＭＡＣアドレス取得の強化 START
 //					sKey[4] = iph.AddressList[0].ToString();
 					sKey[4] = "";

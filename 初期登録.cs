@@ -550,7 +550,11 @@ namespace IS2Client
 				// ‚h‚oƒAƒhƒŒƒX
 				try
 				{
-					System.Net.IPHostEntry iph = System.Net.Dns.GetHostByName(sKey[5]);
+// MOD 2016.09.28 Vivouac) ‹e’r Visual Studio 2013Œ`®‚É•ÏX START
+					//System.Net.IPHostEntry iph = System.Net.Dns.GetHostByName(sKey[5]);
+                    System.Net.IPHostEntry iph = System.Net.Dns.GetHostEntry(sKey[5]);
+// MOD 2016.09.28 Vivouac) ‹e’r Visual Studio 2013Œ`®‚É•ÏX END
+
 // MOD 2008.07.09 “Œ“sj‚–Ø ‚l‚`‚bƒAƒhƒŒƒXæ“¾‚Ì‹­‰» START
 //					sKey[6] = iph.AddressList[0].ToString();
 					sKey[6] = "";

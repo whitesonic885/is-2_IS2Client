@@ -93,329 +93,345 @@ namespace IS2Client
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(請求先登録));
-			this.pnl請求先 = new System.Windows.Forms.Panel();
-			this.lab注意書き = new System.Windows.Forms.Label();
-			this.tex得意先部課名 = new IS2Client.共通テキストボックス();
-			this.tex得意先部課コード = new IS2Client.共通テキストボックス();
-			this.tex得意先コード = new IS2Client.共通テキストボックス();
-			this.label2 = new System.Windows.Forms.Label();
-			this.lab得意先部課コード = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.lab得意先コード = new System.Windows.Forms.Label();
-			this.axGT請求先 = new AxGTABLE32V2Lib.AxGTable32();
-			this.lab得意先部課名 = new System.Windows.Forms.Label();
-			this.label22 = new System.Windows.Forms.Label();
-			this.btn請求先削除 = new System.Windows.Forms.Button();
-			this.btn請求先取消 = new System.Windows.Forms.Button();
-			this.btn請求先登録 = new System.Windows.Forms.Button();
-			this.panel6 = new System.Windows.Forms.Panel();
-			this.panel7 = new System.Windows.Forms.Panel();
-			this.lab請求先タイトル = new System.Windows.Forms.Label();
-			this.panel8 = new System.Windows.Forms.Panel();
-			this.texメッセージ = new System.Windows.Forms.TextBox();
-			this.btn閉じる = new System.Windows.Forms.Button();
-			this.button13 = new System.Windows.Forms.Button();
-			this.button12 = new System.Windows.Forms.Button();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.pnl請求先.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.axGT請求先)).BeginInit();
-			this.panel7.SuspendLayout();
-			this.panel8.SuspendLayout();
-			this.groupBox2.SuspendLayout();
-			this.SuspendLayout();
-			// 
-			// pnl請求先
-			// 
-			this.pnl請求先.BackColor = System.Drawing.Color.Honeydew;
-			this.pnl請求先.Controls.Add(this.lab注意書き);
-			this.pnl請求先.Controls.Add(this.tex得意先部課名);
-			this.pnl請求先.Controls.Add(this.tex得意先部課コード);
-			this.pnl請求先.Controls.Add(this.tex得意先コード);
-			this.pnl請求先.Controls.Add(this.label2);
-			this.pnl請求先.Controls.Add(this.lab得意先部課コード);
-			this.pnl請求先.Controls.Add(this.label3);
-			this.pnl請求先.Controls.Add(this.lab得意先コード);
-			this.pnl請求先.Controls.Add(this.axGT請求先);
-			this.pnl請求先.Controls.Add(this.lab得意先部課名);
-			this.pnl請求先.Controls.Add(this.label22);
-			this.pnl請求先.Controls.Add(this.btn請求先削除);
-			this.pnl請求先.Controls.Add(this.btn請求先取消);
-			this.pnl請求先.Controls.Add(this.btn請求先登録);
-			this.pnl請求先.Location = new System.Drawing.Point(0, 6);
-			this.pnl請求先.Name = "pnl請求先";
-			this.pnl請求先.Size = new System.Drawing.Size(370, 442);
-			this.pnl請求先.TabIndex = 1;
-			// 
-			// lab注意書き
-			// 
-			this.lab注意書き.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.lab注意書き.ForeColor = System.Drawing.Color.Red;
-			this.lab注意書き.Location = new System.Drawing.Point(42, 240);
-			this.lab注意書き.Name = "lab注意書き";
-			this.lab注意書き.Size = new System.Drawing.Size(302, 30);
-			this.lab注意書き.TabIndex = 79;
-			this.lab注意書き.Text = "得意先コード及び得意先部課コードは、最寄の弊社営業所までお問合せください。";
-			this.lab注意書き.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// tex得意先部課名
-			// 
-			this.tex得意先部課名.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.tex得意先部課名.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-			this.tex得意先部課名.Location = new System.Drawing.Point(158, 338);
-			this.tex得意先部課名.MaxLength = 10;
-			this.tex得意先部課名.Name = "tex得意先部課名";
-			this.tex得意先部課名.Size = new System.Drawing.Size(174, 23);
-			this.tex得意先部課名.TabIndex = 4;
-			this.tex得意先部課名.Text = "";
-			// 
-			// tex得意先部課コード
-			// 
-			this.tex得意先部課コード.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.tex得意先部課コード.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.tex得意先部課コード.Location = new System.Drawing.Point(158, 308);
-			this.tex得意先部課コード.MaxLength = 6;
-			this.tex得意先部課コード.Name = "tex得意先部課コード";
-			this.tex得意先部課コード.Size = new System.Drawing.Size(86, 23);
-			this.tex得意先部課コード.TabIndex = 3;
-			this.tex得意先部課コード.Text = "";
-			// 
-			// tex得意先コード
-			// 
-			this.tex得意先コード.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.tex得意先コード.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.tex得意先コード.Location = new System.Drawing.Point(158, 280);
-			this.tex得意先コード.MaxLength = 12;
-			this.tex得意先コード.Name = "tex得意先コード";
-			this.tex得意先コード.Size = new System.Drawing.Size(156, 23);
-			this.tex得意先コード.TabIndex = 2;
-			this.tex得意先コード.Text = "";
-			// 
-			// label2
-			// 
-			this.label2.ForeColor = System.Drawing.Color.Red;
-			this.label2.Location = new System.Drawing.Point(42, 342);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(16, 14);
-			this.label2.TabIndex = 78;
-			this.label2.Text = "※";
-			// 
-			// lab得意先部課コード
-			// 
-			this.lab得意先部課コード.ForeColor = System.Drawing.Color.LimeGreen;
-			this.lab得意先部課コード.Location = new System.Drawing.Point(56, 312);
-			this.lab得意先部課コード.Name = "lab得意先部課コード";
-			this.lab得意先部課コード.Size = new System.Drawing.Size(95, 14);
-			this.lab得意先部課コード.TabIndex = 77;
-			this.lab得意先部課コード.Text = "得意先部課コード";
-			// 
-			// label3
-			// 
-			this.label3.ForeColor = System.Drawing.Color.Red;
-			this.label3.Location = new System.Drawing.Point(42, 286);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(16, 14);
-			this.label3.TabIndex = 76;
-			this.label3.Text = "※";
-			// 
-			// lab得意先コード
-			// 
-			this.lab得意先コード.ForeColor = System.Drawing.Color.LimeGreen;
-			this.lab得意先コード.Location = new System.Drawing.Point(56, 286);
-			this.lab得意先コード.Name = "lab得意先コード";
-			this.lab得意先コード.Size = new System.Drawing.Size(95, 14);
-			this.lab得意先コード.TabIndex = 75;
-			this.lab得意先コード.Text = "得意先コード";
-			// 
-			// axGT請求先
-			// 
-			this.axGT請求先.ContainingControl = this;
-			this.axGT請求先.DataSource = null;
-			this.axGT請求先.Location = new System.Drawing.Point(44, 12);
-			this.axGT請求先.Name = "axGT請求先";
-			this.axGT請求先.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGT請求先.OcxState")));
-			this.axGT請求先.Size = new System.Drawing.Size(306, 217);
-			this.axGT請求先.TabIndex = 0;
-			this.axGT請求先.KeyDownEvent += new AxGTABLE32V2Lib._DGTable32Events_KeyDownEventHandler(this.axGT請求先_KeyDownEvent);
-			this.axGT請求先.CelDblClick += new AxGTABLE32V2Lib._DGTable32Events_CelDblClickEventHandler(this.axGT請求先_CelDblClick);
-			this.axGT請求先.CurPlaceChanged += new AxGTABLE32V2Lib._DGTable32Events_CurPlaceChangedEventHandler(this.axGT請求先_CurPlaceChanged);
-			// 
-			// lab得意先部課名
-			// 
-			this.lab得意先部課名.ForeColor = System.Drawing.Color.LimeGreen;
-			this.lab得意先部課名.Location = new System.Drawing.Point(56, 342);
-			this.lab得意先部課名.Name = "lab得意先部課名";
-			this.lab得意先部課名.Size = new System.Drawing.Size(95, 14);
-			this.lab得意先部課名.TabIndex = 52;
-			this.lab得意先部課名.Text = "得意先部課名";
-			// 
-			// label22
-			// 
-			this.label22.BackColor = System.Drawing.Color.FromArgb(((System.Byte)(44)), ((System.Byte)(241)), ((System.Byte)(83)));
-			this.label22.Font = new System.Drawing.Font("ＭＳ Ｐゴシック", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.label22.ForeColor = System.Drawing.Color.Blue;
-			this.label22.Location = new System.Drawing.Point(0, 0);
-			this.label22.Name = "label22";
-			this.label22.Size = new System.Drawing.Size(22, 444);
-			this.label22.TabIndex = 50;
-			this.label22.Text = "請求先情報";
-			this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// btn請求先削除
-			// 
-			this.btn請求先削除.BackColor = System.Drawing.Color.SteelBlue;
-			this.btn請求先削除.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btn請求先削除.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.btn請求先削除.ForeColor = System.Drawing.Color.White;
-			this.btn請求先削除.Location = new System.Drawing.Point(288, 406);
-			this.btn請求先削除.Name = "btn請求先削除";
-			this.btn請求先削除.Size = new System.Drawing.Size(64, 22);
-			this.btn請求先削除.TabIndex = 13;
-			this.btn請求先削除.Text = "削除";
-			this.btn請求先削除.Click += new System.EventHandler(this.btn請求先削除_Click);
-			// 
-			// btn請求先取消
-			// 
-			this.btn請求先取消.BackColor = System.Drawing.Color.SteelBlue;
-			this.btn請求先取消.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btn請求先取消.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.btn請求先取消.ForeColor = System.Drawing.Color.White;
-			this.btn請求先取消.Location = new System.Drawing.Point(210, 406);
-			this.btn請求先取消.Name = "btn請求先取消";
-			this.btn請求先取消.Size = new System.Drawing.Size(64, 22);
-			this.btn請求先取消.TabIndex = 12;
-			this.btn請求先取消.Text = "取消";
-			this.btn請求先取消.Click += new System.EventHandler(this.btn請求先取消_Click);
-			// 
-			// btn請求先登録
-			// 
-			this.btn請求先登録.BackColor = System.Drawing.Color.SteelBlue;
-			this.btn請求先登録.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btn請求先登録.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.btn請求先登録.ForeColor = System.Drawing.Color.White;
-			this.btn請求先登録.Location = new System.Drawing.Point(134, 406);
-			this.btn請求先登録.Name = "btn請求先登録";
-			this.btn請求先登録.Size = new System.Drawing.Size(64, 22);
-			this.btn請求先登録.TabIndex = 10;
-			this.btn請求先登録.Text = "保存";
-			this.btn請求先登録.Click += new System.EventHandler(this.btn請求先登録_Click);
-			// 
-			// panel6
-			// 
-			this.panel6.BackColor = System.Drawing.Color.PaleGreen;
-			this.panel6.Location = new System.Drawing.Point(0, 26);
-			this.panel6.Name = "panel6";
-			this.panel6.Size = new System.Drawing.Size(396, 26);
-			this.panel6.TabIndex = 12;
-			// 
-			// panel7
-			// 
-			this.panel7.BackColor = System.Drawing.Color.FromArgb(((System.Byte)(44)), ((System.Byte)(241)), ((System.Byte)(83)));
-			this.panel7.Controls.Add(this.lab請求先タイトル);
-			this.panel7.Location = new System.Drawing.Point(0, 0);
-			this.panel7.Name = "panel7";
-			this.panel7.Size = new System.Drawing.Size(396, 26);
-			this.panel7.TabIndex = 13;
-			// 
-			// lab請求先タイトル
-			// 
-			this.lab請求先タイトル.BackColor = System.Drawing.Color.FromArgb(((System.Byte)(44)), ((System.Byte)(241)), ((System.Byte)(83)));
-			this.lab請求先タイトル.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.lab請求先タイトル.ForeColor = System.Drawing.Color.White;
-			this.lab請求先タイトル.Location = new System.Drawing.Point(12, 2);
-			this.lab請求先タイトル.Name = "lab請求先タイトル";
-			this.lab請求先タイトル.Size = new System.Drawing.Size(264, 24);
-			this.lab請求先タイトル.TabIndex = 0;
-			this.lab請求先タイトル.Text = "請求先情報メンテナンス";
-			// 
-			// panel8
-			// 
-			this.panel8.BackColor = System.Drawing.Color.PaleGreen;
-			this.panel8.Controls.Add(this.texメッセージ);
-			this.panel8.Controls.Add(this.btn閉じる);
-			this.panel8.Location = new System.Drawing.Point(0, 516);
-			this.panel8.Name = "panel8";
-			this.panel8.Size = new System.Drawing.Size(396, 58);
-			this.panel8.TabIndex = 2;
-			// 
-			// texメッセージ
-			// 
-			this.texメッセージ.BackColor = System.Drawing.Color.PaleGreen;
-			this.texメッセージ.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(128)));
-			this.texメッセージ.ForeColor = System.Drawing.Color.Red;
-			this.texメッセージ.Location = new System.Drawing.Point(126, 4);
-			this.texメッセージ.Multiline = true;
-			this.texメッセージ.Name = "texメッセージ";
-			this.texメッセージ.ReadOnly = true;
-			this.texメッセージ.Size = new System.Drawing.Size(256, 50);
-			this.texメッセージ.TabIndex = 1;
-			this.texメッセージ.TabStop = false;
-			this.texメッセージ.Text = "";
-			// 
-			// btn閉じる
-			// 
-			this.btn閉じる.ForeColor = System.Drawing.Color.Red;
-			this.btn閉じる.Location = new System.Drawing.Point(8, 6);
-			this.btn閉じる.Name = "btn閉じる";
-			this.btn閉じる.Size = new System.Drawing.Size(54, 48);
-			this.btn閉じる.TabIndex = 0;
-			this.btn閉じる.TabStop = false;
-			this.btn閉じる.Text = "閉じる";
-			this.btn閉じる.Click += new System.EventHandler(this.btn閉じる_Click);
-			// 
-			// button13
-			// 
-			this.button13.Location = new System.Drawing.Point(0, 0);
-			this.button13.Name = "button13";
-			this.button13.TabIndex = 0;
-			// 
-			// button12
-			// 
-			this.button12.Location = new System.Drawing.Point(0, 0);
-			this.button12.Name = "button12";
-			this.button12.TabIndex = 0;
-			// 
-			// groupBox2
-			// 
-			this.groupBox2.Controls.Add(this.pnl請求先);
-			this.groupBox2.Location = new System.Drawing.Point(8, 58);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(372, 450);
-			this.groupBox2.TabIndex = 1;
-			this.groupBox2.TabStop = false;
-			// 
-			// 請求先登録
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-			this.BackColor = System.Drawing.Color.Honeydew;
-			this.ClientSize = new System.Drawing.Size(388, 574);
-			this.Controls.Add(this.groupBox2);
-			this.Controls.Add(this.panel8);
-			this.Controls.Add(this.panel7);
-			this.Controls.Add(this.panel6);
-			this.ForeColor = System.Drawing.Color.Black;
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-			this.KeyPreview = true;
-			this.MaximizeBox = false;
-			this.MinimizeBox = false;
-			this.MinimumSize = new System.Drawing.Size(394, 605);
-			this.Name = "請求先登録";
-			this.ShowInTaskbar = false;
-			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-			this.Text = "is-2 請求先情報メンテナンス";
-			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.エンター移動);
-			this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.エンターキャンセル);
-			this.Load += new System.EventHandler(this.請求先登録_Load);
-			this.Closed += new System.EventHandler(this.請求先登録_Closed);
-			this.pnl請求先.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.axGT請求先)).EndInit();
-			this.panel7.ResumeLayout(false);
-			this.panel8.ResumeLayout(false);
-			this.groupBox2.ResumeLayout(false);
-			this.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(請求先登録));
+            this.pnl請求先 = new System.Windows.Forms.Panel();
+            this.lab注意書き = new System.Windows.Forms.Label();
+            this.tex得意先部課名 = new IS2Client.共通テキストボックス();
+            this.tex得意先部課コード = new IS2Client.共通テキストボックス();
+            this.tex得意先コード = new IS2Client.共通テキストボックス();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lab得意先部課コード = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lab得意先コード = new System.Windows.Forms.Label();
+            this.axGT請求先 = new AxGTABLE32V2Lib.AxGTable32();
+            this.lab得意先部課名 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.btn請求先削除 = new System.Windows.Forms.Button();
+            this.btn請求先取消 = new System.Windows.Forms.Button();
+            this.btn請求先登録 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.lab請求先タイトル = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.texメッセージ = new System.Windows.Forms.TextBox();
+            this.btn閉じる = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ds送り状)).BeginInit();
+            this.pnl請求先.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axGT請求先)).BeginInit();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pnl請求先
+            // 
+            this.pnl請求先.BackColor = System.Drawing.Color.Honeydew;
+            this.pnl請求先.Controls.Add(this.lab注意書き);
+            this.pnl請求先.Controls.Add(this.tex得意先部課名);
+            this.pnl請求先.Controls.Add(this.tex得意先部課コード);
+            this.pnl請求先.Controls.Add(this.tex得意先コード);
+            this.pnl請求先.Controls.Add(this.label2);
+            this.pnl請求先.Controls.Add(this.lab得意先部課コード);
+            this.pnl請求先.Controls.Add(this.label3);
+            this.pnl請求先.Controls.Add(this.lab得意先コード);
+            this.pnl請求先.Controls.Add(this.axGT請求先);
+            this.pnl請求先.Controls.Add(this.lab得意先部課名);
+            this.pnl請求先.Controls.Add(this.label22);
+            this.pnl請求先.Controls.Add(this.btn請求先削除);
+            this.pnl請求先.Controls.Add(this.btn請求先取消);
+            this.pnl請求先.Controls.Add(this.btn請求先登録);
+            this.pnl請求先.Location = new System.Drawing.Point(0, 6);
+            this.pnl請求先.Name = "pnl請求先";
+            this.pnl請求先.Size = new System.Drawing.Size(370, 442);
+            this.pnl請求先.TabIndex = 1;
+            // 
+            // lab注意書き
+            // 
+            this.lab注意書き.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lab注意書き.ForeColor = System.Drawing.Color.Red;
+            this.lab注意書き.Location = new System.Drawing.Point(42, 240);
+            this.lab注意書き.Name = "lab注意書き";
+            this.lab注意書き.Size = new System.Drawing.Size(302, 30);
+            this.lab注意書き.TabIndex = 79;
+            this.lab注意書き.Text = "得意先コード及び得意先部課コードは、最寄の弊社営業所までお問合せください。";
+            this.lab注意書き.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tex得意先部課名
+            // 
+            this.tex得意先部課名.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tex得意先部課名.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+            this.tex得意先部課名.Location = new System.Drawing.Point(158, 338);
+            this.tex得意先部課名.MaxLength = 10;
+            this.tex得意先部課名.Name = "tex得意先部課名";
+            this.tex得意先部課名.Size = new System.Drawing.Size(174, 23);
+            this.tex得意先部課名.TabIndex = 4;
+            // 
+            // tex得意先部課コード
+            // 
+            this.tex得意先部課コード.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tex得意先部課コード.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.tex得意先部課コード.Location = new System.Drawing.Point(158, 308);
+            this.tex得意先部課コード.MaxLength = 6;
+            this.tex得意先部課コード.Name = "tex得意先部課コード";
+            this.tex得意先部課コード.Size = new System.Drawing.Size(86, 23);
+            this.tex得意先部課コード.TabIndex = 3;
+            // 
+            // tex得意先コード
+            // 
+            this.tex得意先コード.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.tex得意先コード.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.tex得意先コード.Location = new System.Drawing.Point(158, 280);
+            this.tex得意先コード.MaxLength = 12;
+            this.tex得意先コード.Name = "tex得意先コード";
+            this.tex得意先コード.Size = new System.Drawing.Size(156, 23);
+            this.tex得意先コード.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(42, 342);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 14);
+            this.label2.TabIndex = 78;
+            this.label2.Text = "※";
+            // 
+            // lab得意先部課コード
+            // 
+            this.lab得意先部課コード.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lab得意先部課コード.Location = new System.Drawing.Point(56, 312);
+            this.lab得意先部課コード.Name = "lab得意先部課コード";
+            this.lab得意先部課コード.Size = new System.Drawing.Size(95, 14);
+            this.lab得意先部課コード.TabIndex = 77;
+            this.lab得意先部課コード.Text = "得意先部課コード";
+            // 
+            // label3
+            // 
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(42, 286);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 14);
+            this.label3.TabIndex = 76;
+            this.label3.Text = "※";
+            // 
+            // lab得意先コード
+            // 
+            this.lab得意先コード.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lab得意先コード.Location = new System.Drawing.Point(56, 286);
+            this.lab得意先コード.Name = "lab得意先コード";
+            this.lab得意先コード.Size = new System.Drawing.Size(95, 14);
+            this.lab得意先コード.TabIndex = 75;
+            this.lab得意先コード.Text = "得意先コード";
+            // 
+            // axGT請求先
+            // 
+            this.axGT請求先.DataSource = null;
+            this.axGT請求先.Location = new System.Drawing.Point(44, 12);
+            this.axGT請求先.Name = "axGT請求先";
+            this.axGT請求先.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axGT請求先.OcxState")));
+            this.axGT請求先.Size = new System.Drawing.Size(306, 217);
+            this.axGT請求先.TabIndex = 0;
+            this.axGT請求先.CurPlaceChanged += new AxGTABLE32V2Lib._DGTable32Events_CurPlaceChangedEventHandler(this.axGT請求先_CurPlaceChanged);
+            this.axGT請求先.CelDblClick += new AxGTABLE32V2Lib._DGTable32Events_CelDblClickEventHandler(this.axGT請求先_CelDblClick);
+            this.axGT請求先.KeyDownEvent += new AxGTABLE32V2Lib._DGTable32Events_KeyDownEventHandler(this.axGT請求先_KeyDownEvent);
+            // 
+            // lab得意先部課名
+            // 
+            this.lab得意先部課名.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lab得意先部課名.Location = new System.Drawing.Point(56, 342);
+            this.lab得意先部課名.Name = "lab得意先部課名";
+            this.lab得意先部課名.Size = new System.Drawing.Size(95, 14);
+            this.lab得意先部課名.TabIndex = 52;
+            this.lab得意先部課名.Text = "得意先部課名";
+            // 
+            // label22
+            // 
+            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(241)))), ((int)(((byte)(83)))));
+            this.label22.Font = new System.Drawing.Font("ＭＳ Ｐゴシック", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Blue;
+            this.label22.Location = new System.Drawing.Point(0, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(22, 444);
+            this.label22.TabIndex = 50;
+            this.label22.Text = "請求先情報";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn請求先削除
+            // 
+            this.btn請求先削除.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn請求先削除.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn請求先削除.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn請求先削除.ForeColor = System.Drawing.Color.White;
+            this.btn請求先削除.Location = new System.Drawing.Point(288, 406);
+            this.btn請求先削除.Name = "btn請求先削除";
+            this.btn請求先削除.Size = new System.Drawing.Size(64, 22);
+            this.btn請求先削除.TabIndex = 13;
+            this.btn請求先削除.Text = "削除";
+            this.btn請求先削除.UseVisualStyleBackColor = false;
+            this.btn請求先削除.Click += new System.EventHandler(this.btn請求先削除_Click);
+            // 
+            // btn請求先取消
+            // 
+            this.btn請求先取消.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn請求先取消.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn請求先取消.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn請求先取消.ForeColor = System.Drawing.Color.White;
+            this.btn請求先取消.Location = new System.Drawing.Point(210, 406);
+            this.btn請求先取消.Name = "btn請求先取消";
+            this.btn請求先取消.Size = new System.Drawing.Size(64, 22);
+            this.btn請求先取消.TabIndex = 12;
+            this.btn請求先取消.Text = "取消";
+            this.btn請求先取消.UseVisualStyleBackColor = false;
+            this.btn請求先取消.Click += new System.EventHandler(this.btn請求先取消_Click);
+            // 
+            // btn請求先登録
+            // 
+            this.btn請求先登録.BackColor = System.Drawing.Color.SteelBlue;
+            this.btn請求先登録.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn請求先登録.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn請求先登録.ForeColor = System.Drawing.Color.White;
+            this.btn請求先登録.Location = new System.Drawing.Point(134, 406);
+            this.btn請求先登録.Name = "btn請求先登録";
+            this.btn請求先登録.Size = new System.Drawing.Size(64, 22);
+            this.btn請求先登録.TabIndex = 10;
+            this.btn請求先登録.Text = "保存";
+            this.btn請求先登録.UseVisualStyleBackColor = false;
+            this.btn請求先登録.Click += new System.EventHandler(this.btn請求先登録_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.PaleGreen;
+            this.panel6.Location = new System.Drawing.Point(0, 26);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(396, 26);
+            this.panel6.TabIndex = 12;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(241)))), ((int)(((byte)(83)))));
+            this.panel7.Controls.Add(this.lab請求先タイトル);
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(396, 26);
+            this.panel7.TabIndex = 13;
+            // 
+            // lab請求先タイトル
+            // 
+            this.lab請求先タイトル.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(241)))), ((int)(((byte)(83)))));
+            this.lab請求先タイトル.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lab請求先タイトル.ForeColor = System.Drawing.Color.White;
+            this.lab請求先タイトル.Location = new System.Drawing.Point(12, 2);
+            this.lab請求先タイトル.Name = "lab請求先タイトル";
+            this.lab請求先タイトル.Size = new System.Drawing.Size(264, 24);
+            this.lab請求先タイトル.TabIndex = 0;
+            this.lab請求先タイトル.Text = "請求先情報メンテナンス";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.PaleGreen;
+            this.panel8.Controls.Add(this.texメッセージ);
+            this.panel8.Controls.Add(this.btn閉じる);
+            this.panel8.Location = new System.Drawing.Point(0, 516);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(396, 58);
+            this.panel8.TabIndex = 2;
+            // 
+            // texメッセージ
+            // 
+            this.texメッセージ.BackColor = System.Drawing.Color.PaleGreen;
+            this.texメッセージ.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.texメッセージ.ForeColor = System.Drawing.Color.Red;
+            this.texメッセージ.Location = new System.Drawing.Point(126, 4);
+            this.texメッセージ.Multiline = true;
+            this.texメッセージ.Name = "texメッセージ";
+            this.texメッセージ.ReadOnly = true;
+            this.texメッセージ.Size = new System.Drawing.Size(256, 50);
+            this.texメッセージ.TabIndex = 1;
+            this.texメッセージ.TabStop = false;
+            // 
+            // btn閉じる
+            // 
+            this.btn閉じる.ForeColor = System.Drawing.Color.Red;
+            this.btn閉じる.Location = new System.Drawing.Point(8, 6);
+            this.btn閉じる.Name = "btn閉じる";
+            this.btn閉じる.Size = new System.Drawing.Size(54, 48);
+            this.btn閉じる.TabIndex = 0;
+            this.btn閉じる.TabStop = false;
+            this.btn閉じる.Text = "閉じる";
+            this.btn閉じる.Click += new System.EventHandler(this.btn閉じる_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(0, 0);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 23);
+            this.button13.TabIndex = 0;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(0, 0);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.pnl請求先);
+            this.groupBox2.Location = new System.Drawing.Point(8, 58);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(372, 450);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            // 
+            // 請求先登録
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
+            this.BackColor = System.Drawing.Color.Honeydew;
+            this.ClientSize = new System.Drawing.Size(388, 574);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(394, 605);
+            this.Name = "請求先登録";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "is-2 請求先情報メンテナンス";
+            this.Closed += new System.EventHandler(this.請求先登録_Closed);
+            this.Load += new System.EventHandler(this.請求先登録_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Onエンター移動);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Onエンターキャンセル);
+            ((System.ComponentModel.ISupportInitialize)(this.ds送り状)).EndInit();
+            this.pnl請求先.ResumeLayout(false);
+            this.pnl請求先.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axGT請求先)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.ResumeLayout(false);
 
 		}
 		#endregion
+
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+        protected void Onエンター移動(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            base.エンター移動(sender, e);
+        }
+
+        protected void Onエンターキャンセル(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            base.エンターキャンセル(sender, e);
+        }
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
 
 		private void btn閉じる_Click(object sender, System.EventArgs e)
 		{

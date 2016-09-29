@@ -117,14 +117,30 @@ namespace IS2Client
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 			this.Text = "is-2 アイコン選択";
-			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.エンター移動);
-			this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.エンターキャンセル);
-			this.Load += new System.EventHandler(this.アイコン選択_Load);
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+            //this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.エンター移動);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Onエンター移動);
+            //this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.エンターキャンセル);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Onエンターキャンセル);
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
+            this.Load += new System.EventHandler(this.アイコン選択_Load);
 			this.Closed += new System.EventHandler(this.アイコン選択_Closed);
 			this.ResumeLayout(false);
 
 		}
 		#endregion
+
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 START
+        protected void Onエンター移動(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            base.エンター移動(sender, e);
+        }
+
+        protected void Onエンターキャンセル(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            base.エンターキャンセル(sender, e);
+        }
+// MOD 2016.09.28 Vivouac) 菊池 Visual Studio 2013形式に変更 END
 
 		/// <summary>
 		/// アプリケーションのメイン エントリ ポイントです。
